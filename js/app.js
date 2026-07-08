@@ -78,8 +78,19 @@ function exactHit(scores, mid) {
   return !!(dirFromScore(mine) && dirFromScore(actual) && +mine.h === +actual.h && +mine.a === +actual.a && (state.results || {})[mid]);
 }
 
+let pickSyncTimer = null;
+let lastMyWriteAt = 0; // guards the remote-removal unlock against write races
 function persistMe() {
   Store.saveMe({ name: state.name, picks: state.picks, scores: state.scores, submitted: state.submitted });
+  // Already on the board: quietly push pick changes to the shared backend
+  // (debounced), so an edited pick counts even without re-tapping Submit.
+  if (state.submitted && state.name.trim()) {
+    clearTimeout(pickSyncTimer);
+    pickSyncTimer = setTimeout(() => {
+      lastMyWriteAt = Date.now();
+      Store.upsertParticipant(Store.deviceId(), state.name.trim(), state.picks, state.scores);
+    }, 1200);
+  }
 }
 
 /* '1' | 'X' | '2' derived from an exact score, or null if incomplete. */
@@ -126,7 +137,8 @@ function countdownFor(m) {
   const s = Math.floor(diff / 1000), d = Math.floor(s / 86400);
   const pad = x => String(x).padStart(2, '0');
   const hms = pad(Math.floor(s % 86400 / 3600)) + ':' + pad(Math.floor(s % 3600 / 60)) + ':' + pad(s % 60);
-  return { text: d > 0 ? t().lockIn + d + t().days + hms : t().lockIn + hms, urgent: diff < 3600000 };
+  const dayPart = d === 1 ? t().dayOne : d > 1 ? d + t().days : '';
+  return { text: t().lockIn + dayPart + hms, urgent: diff < 3600000 };
 }
 
 function openPickCount(all) {
@@ -134,11 +146,13 @@ function openPickCount(all) {
 }
 
 function submitState(all) {
-  const count = openPickCount(all);
+  const open = openPickCount(all);
+  const total = Object.keys(state.picks).filter(k => state.picks[k]).length;
+  const count = open > 0 ? open : total;
   const canSubmit = count > 0 && state.name.trim().length > 1;
   const label = !state.name.trim() ? t().enterName :
     count === 0 ? t().pickOne :
-    (state.submitted ? t().update : t().send) + count + t().guesses;
+    (state.submitted ? t().update : t().send) + (count === 1 ? t().guessOne : count + t().guesses);
   return { count, canSubmit, label };
 }
 
@@ -216,8 +230,10 @@ function scoreRowHtml(m, sc, locked, isAdmin) {
   const dis = locked ? ' disabled' : '';
   const attr = isAdmin ? 'data-rscore' : 'data-score';
   const val = side => (sc && sc[side] != null && sc[side] !== '' ? esc(sc[side]) : '');
-  return '<div class="score-row' + (isAdmin ? ' admin' : '') + '">' +
-    '<span class="score-label">' + esc(isAdmin ? S.adminScoreLabel : S.scoreLabel) + '</span>' +
+  // Grid matches the 1/X/2 button columns, so each score box sits directly
+  // under its team's button — unambiguous in both RTL and LTR.
+  return '<div class="score-label">' + esc(isAdmin ? S.adminScoreLabel : S.scoreLabel) + '</div>' +
+  '<div class="score-row' + (isAdmin ? ' admin' : '') + '">' +
     '<input class="score-input" type="tel" inputmode="numeric" maxlength="2" ' + attr + '="' + m.id + '" data-side="h" value="' + val('h') + '"' + dis + '>' +
     '<span class="score-colon">:</span>' +
     '<input class="score-input" type="tel" inputmode="numeric" maxlength="2" ' + attr + '="' + m.id + '" data-side="a" value="' + val('a') + '"' + dis + '>' +
@@ -262,10 +278,11 @@ function renderBoardScreen(all) {
   const champ = cupChampion(all);
   const finished = !!champ;
 
+  const champNames = rows.length ? rows.filter(r => r.pts === rows[0].pts).map(r => r.name).join(' · ') : '';
   const champCard = finished && rows.length ? '' +
     '<div class="champ-card">' +
       '<span class="champ-label">' + esc(S.champLabel) + '</span>' +
-      '<span class="champ-name">' + esc(rows[0].name) + '</span>' +
+      '<span class="champ-name">' + esc(champNames) + '</span>' +
       '<span class="champ-sub">' + esc(rows[0].pts + S.champSubA + tName(champ)) + '</span>' +
     '</div>' : '';
 
@@ -421,7 +438,7 @@ function applyFetched() {
   const adv = { ...state.adv };
   (state.fetched || []).forEach(fr => {
     resScores[fr.mid] = { h: fr.h, a: fr.a };
-    const d = fr.h > fr.a ? '1' : fr.h < fr.a ? '2' : 'X';
+    const d = dirFromScore({ h: fr.h, a: fr.a });
     results[fr.mid] = d;
     if (d !== 'X') delete adv[fr.mid];
   });
@@ -471,7 +488,9 @@ function renderAdminScreen(all) {
     return '<div class="part-row">' +
       '<span class="board-name">' + esc(v.name || '—') + '</span>' +
       '<span class="part-meta">' + nPicks + ' · ' + pts + '</span>' +
-      '<button class="remove-btn" data-action="remove-participant" data-val="' + esc(id) + '" data-name="' + esc(v.name || '') + '">\u2715</button>' +
+      (state.armedRemove === id
+        ? '<button class="remove-btn armed" data-action="remove-participant" data-val="' + esc(id) + '">' + esc(S.confirmRemove) + '</button>'
+        : '<button class="remove-btn" data-action="remove-participant" data-val="' + esc(id) + '">\u2715</button>') +
     '</div>';
   }).join('');
   const partsSection = '' +
@@ -514,7 +533,8 @@ function renderAdminScreen(all) {
       '<div class="admin-info">' + esc(S.adminInfo) + '</div>' +
       '<div class="fetch-card">' + fetchCard + '</div>' +
       cards +
-      '<button class="reset-btn" data-action="reset-results">' + esc(S.resetResults) + '</button>' +
+      '<button class="reset-btn' + (state.armedRemove === 'reset-all' ? ' armed' : '') + '" data-action="reset-results">' +
+        esc(state.armedRemove === 'reset-all' ? S.confirmRemove : S.resetResults) + '</button>' +
       partsSection +
       picksSection +
     '</div>';
@@ -562,8 +582,7 @@ function render() {
       tabBtn('picks', S.tabPicks) + tabBtn('board', S.tabBoard) + tabBtn('tree', S.tabTree) +
       (CONFIG.showAdmin ? tabBtn('admin', S.tabAdmin) : '') +
     '</div>' +
-    screen +
-    (state.toast ? '<div class="toast' + (state.toastError ? ' error' : '') + '">' + esc(state.toast) + '</div>' : '');
+    screen;
 }
 
 /* ---------- targeted updates (keep input focus, 1s tick) ---------- */
@@ -576,28 +595,54 @@ function updateSubmitBar() {
   btn.classList.toggle('enabled', sub.canSubmit);
 }
 
+/* Render unless the user is typing; deferred renders are flushed by tick(). */
+function safeRender() {
+  const a = document.activeElement;
+  if (a && (a.tagName === 'INPUT' || a.tagName === 'TEXTAREA')) {
+    state.pendingRender = true;
+    return;
+  }
+  state.pendingRender = false;
+  render();
+}
+
+let lockAtCache = null; // constant per session — match lock times don't change
+function allLockAts() {
+  if (!lockAtCache) lockAtCache = resolved().map(m => m.lockAt).filter(Boolean);
+  return lockAtCache;
+}
+
 function tick() {
+  const prev = state.now;
   state.now = Date.now();
+  const a = document.activeElement;
+  const typing = a && (a.tagName === 'INPUT' || a.tagName === 'TEXTAREA');
+  if (state.pendingRender && !typing) { safeRender(); return; }
+  const crossed = allLockAts().some(ts => ts > prev && ts <= state.now);
+  if (crossed) { safeRender(); return; } // a match just locked
+  const els = root.querySelectorAll('[data-countdown]');
+  if (!els.length) return; // nothing ticking on this screen — skip all work
   const all = resolved();
-  let needsFullRender = false;
-  root.querySelectorAll('[data-countdown]').forEach(el => {
+  els.forEach(el => {
     const m = all.find(x => x.id === el.getAttribute('data-countdown'));
     const cd = m && countdownFor(m);
-    if (!cd) { needsFullRender = true; return; } // crossed the lock boundary
+    if (!cd) { el.textContent = ''; return; }
     el.textContent = cd.text;
     el.classList.toggle('urgent', cd.urgent);
   });
-  if (needsFullRender) render();
 }
 
 /* ---------- actions ---------- */
 
 function showToast(msg, isError) {
-  state.toast = msg;
-  state.toastError = !!isError;
-  render();
+  const old = document.querySelector('.toast');
+  if (old) old.remove();
+  const el = document.createElement('div');
+  el.className = 'toast' + (isError ? ' error' : '');
+  el.textContent = msg;
+  document.body.appendChild(el);
   clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => { state.toast = ''; state.toastError = false; render(); }, 2600);
+  toastTimer = setTimeout(() => el.remove(), 2600);
 }
 
 function tryPin() {
@@ -617,7 +662,10 @@ function saveResultsState(results, adv, resScores) {
 }
 
 function waShare(text) {
-  try { window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank'); } catch (e) {}
+  const url = 'https://wa.me/?text=' + encodeURIComponent(text);
+  let w = null;
+  try { w = window.open(url, '_blank'); } catch (e) {}
+  if (!w) location.href = url; // popup blocked (in-app browsers) — navigate instead
 }
 
 function sharePicksText(all) {
@@ -651,7 +699,6 @@ root.addEventListener('click', e => {
   const action = el.getAttribute('data-action');
   const mid = el.getAttribute('data-match');
   const val = el.getAttribute('data-val');
-  const all = resolved();
 
   switch (action) {
     case 'lang':
@@ -664,7 +711,7 @@ root.addEventListener('click', e => {
       render();
       break;
     case 'pick': {
-      const m = all.find(x => x.id === mid);
+      const m = resolved().find(x => x.id === mid);
       if (!m || m.locked) return;
       const newPick = state.picks[mid] === val ? undefined : val;
       state.picks = { ...state.picks, [mid]: newPick };
@@ -679,21 +726,25 @@ root.addEventListener('click', e => {
       break;
     }
     case 'submit': {
-      const sub = submitState(all);
+      const sub = submitState(resolved());
       if (!sub.canSubmit) return;
+      if (!Store.isLoaded()) { Store.refresh(); showToast(t().syncWait, true); return; }
       const myId = Store.deviceId();
       const nm = state.name.trim();
       const taken = Object.entries(Store.loadBoard())
         .some(([id, v]) => id !== myId && (v.name || '').trim().toLowerCase() === nm.toLowerCase());
       if (taken) { showToast(t().nameTaken, true); return; }
-      Store.upsertParticipant(myId, nm, state.picks, state.scores);
-      state.submitted = true;
-      persistMe();
-      showToast(t().toastSaved);
+      lastMyWriteAt = Date.now();
+      Store.upsertParticipant(myId, nm, state.picks, state.scores).then(okWrite => {
+        if (!okWrite) { showToast(t().netErr, true); return; }
+        lastMyWriteAt = Date.now();
+        if (!state.submitted) { state.submitted = true; persistMe(); safeRender(); }
+        showToast(t().toastSaved);
+      });
       break;
     }
     case 'share-picks':
-      waShare(sharePicksText(all));
+      waShare(sharePicksText(resolved()));
       break;
     case 'share-board':
       waShare(shareBoardText());
@@ -722,8 +773,15 @@ root.addEventListener('click', e => {
       render();
       break;
     case 'remove-participant': {
-      const nm = el.getAttribute('data-name') || '';
-      if (!window.confirm(t().removeConfirmA + nm + t().removeConfirmB)) return;
+      if (state.armedRemove !== val) { // first tap arms; second tap (within 4s) deletes
+        state.armedRemove = val;
+        clearTimeout(state._armT);
+        state._armT = setTimeout(() => { state.armedRemove = null; safeRender(); }, 4000);
+        render();
+        return;
+      }
+      clearTimeout(state._armT);
+      state.armedRemove = null;
       Store.removeParticipant(val);
       if (val === Store.deviceId()) { state.submitted = false; persistMe(); }
       render();
@@ -751,6 +809,15 @@ root.addEventListener('click', e => {
       break;
     }
     case 'reset-results':
+      if (state.armedRemove !== 'reset-all') {
+        state.armedRemove = 'reset-all';
+        clearTimeout(state._armT);
+        state._armT = setTimeout(() => { state.armedRemove = null; safeRender(); }, 4000);
+        render();
+        return;
+      }
+      clearTimeout(state._armT);
+      state.armedRemove = null;
       saveResultsState({}, {}, {});
       render();
       break;
@@ -841,11 +908,31 @@ root.addEventListener('keydown', e => {
   try { state.helpOpen = localStorage.getItem('wc26-oranim-help') !== '1'; } catch (err) { state.helpOpen = true; }
   render();
   setInterval(tick, 1000);
-  // Shared-backend mode: refresh when other devices' data arrives, but never
-  // mid-typing — a focused input survives until the next sync cycle.
+  // Shared-backend mode: pull the freshest shared data into state on every
+  // sync change, then re-render (deferred while an input is focused so
+  // typing is never interrupted — tick() flushes it as soon as it's safe).
   Store.startSync(() => {
-    const a = document.activeElement;
-    if (a && (a.tagName === 'INPUT' || a.tagName === 'TEXTAREA')) return;
-    render();
+    const r = Store.loadResults();
+    state.results = r.results;
+    state.adv = r.adv;
+    state.resScores = r.scores || {};
+    // If the admin removed this device's row remotely, unlock the name —
+    // but never right after our own write (a poll can race the insert).
+    if (state.submitted && !Store.loadBoard()[Store.deviceId()] &&
+        Date.now() - lastMyWriteAt > 20000) {
+      state.submitted = false;
+      persistMe();
+    }
+    safeRender();
+  });
+  root.addEventListener('focusout', () => {
+    if (state.pendingRender) setTimeout(() => { if (state.pendingRender) safeRender(); }, 80);
+  });
+  // Coming back from background (bfcache / screen off): clock and data are stale.
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) { state.now = Date.now(); Store.refresh(); safeRender(); }
+  });
+  window.addEventListener('pageshow', e => {
+    if (e.persisted) { state.now = Date.now(); Store.refresh(); safeRender(); }
   });
 })();

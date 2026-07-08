@@ -1,10 +1,11 @@
 /* Persistence layer.
    Two modes, chosen automatically:
-   - SHARED (Supabase): fill in SUPABASE.url + SUPABASE.anonKey below and run
-     supabase-setup.sql once in the Supabase SQL Editor — every phone then sees
-     one live competition (board + results sync every few seconds).
-   - LOCAL (default): with SUPABASE left empty, everything stays in this
-     device's localStorage, exactly like the prototype.
+   - SHARED (Supabase): with SUPABASE.url + SUPABASE.anonKey filled in and
+     supabase-setup.sql run once in the Supabase SQL Editor — every phone sees
+     one live competition (board + results poll every POLL_MS, writes are
+     confirmed against the server).
+   - LOCAL: with SUPABASE left empty, everything stays in this device's
+     localStorage, exactly like the prototype.
    The rest of the app only talks to `Store`, so this is the only file that
    deals with where data lives. */
 
@@ -13,10 +14,12 @@ const SUPABASE = {
   anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ4bmt1dWhvZXJwZXJmeWlib2tuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM0NTQyMTQsImV4cCI6MjA5OTAzMDIxNH0.NeD81EG8EiYjHvzSiJ9Jhd_xqnvm6ppAvqY9yPaeEq0'
 };
 
+const POLL_MS = 30000; // paused while the tab is hidden; refreshed on return
+
 const KEYS = {
   me: 'wc26-oranim',            // { name, picks, scores, submitted }
-  board: 'wc26-oranim-board',   // { [deviceId]: { name, picks, scores } }
-  results: 'wc26-oranim-results', // { results: {matchId:'1'|'X'|'2'}, adv: {matchId: team}, scores: {matchId:{h,a}} }
+  board: 'wc26-oranim-board',   // { [deviceId]: { name, picks, scores } } — last known state
+  results: 'wc26-oranim-results', // { results, adv, scores } — last known state
   lang: 'wc26-oranim-lang',
   id: 'wc26-oranim-id'
 };
@@ -29,7 +32,9 @@ const cloud = {
   results: { results: {}, adv: {}, scores: {} },
   loaded: false,
   onChange: null,
-  snapshot: ''
+  snapshot: '',
+  lastWriteAt: 0, // polls that started before the latest local write are discarded
+  started: false
 };
 
 function sbHeaders(extra) {
@@ -40,8 +45,16 @@ function sbHeaders(extra) {
   }, extra || {});
 }
 
+function lsSet(key, value) {
+  try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) {}
+}
+function lsGet(key, fallback) {
+  try { return JSON.parse(localStorage.getItem(key) || 'null') || fallback; } catch (e) { return fallback; }
+}
+
 function sbFetchAll() {
   if (!cloud.enabled) return;
+  const startedAt = Date.now();
   Promise.all([
     fetch(SUPABASE.url + '/rest/v1/participants?select=*', { headers: sbHeaders() }),
     fetch(SUPABASE.url + '/rest/v1/results?id=eq.1&select=*', { headers: sbHeaders() })
@@ -50,6 +63,10 @@ function sbFetchAll() {
     return Promise.all([pRes.json(), rRes.json()]);
   }).then(data => {
     if (!data) return;
+    // A local write happened while this poll was in flight — its response is
+    // stale (it may not contain the write yet); drop it, the post-write
+    // refresh will bring fresh data.
+    if (cloud.lastWriteAt > startedAt) return;
     const [parts, resRows] = data;
     const board = {};
     parts.forEach(p => {
@@ -59,6 +76,10 @@ function sbFetchAll() {
     cloud.board = board;
     cloud.results = { results: row.results || {}, adv: row.adv || {}, scores: row.scores || {} };
     cloud.loaded = true;
+    // Mirror to localStorage so a later offline load starts from the last
+    // known shared state instead of this device's ancient private copy.
+    lsSet(KEYS.board, board);
+    lsSet(KEYS.results, cloud.results);
     const snap = JSON.stringify([cloud.board, cloud.results]);
     if (snap !== cloud.snapshot) {
       cloud.snapshot = snap;
@@ -67,74 +88,86 @@ function sbFetchAll() {
   }).catch(() => {});
 }
 
+/* Refetch shortly after a write lands so all local caches converge. */
+function sbAfterWrite() {
+  cloud.snapshot = ''; // force onChange on the refresh even if data looks same
+  setTimeout(sbFetchAll, 400);
+}
+
 function sbUpsertParticipant(id, name, picks, scores) {
-  fetch(SUPABASE.url + '/rest/v1/participants?on_conflict=id', {
+  cloud.lastWriteAt = Date.now();
+  return fetch(SUPABASE.url + '/rest/v1/participants?on_conflict=id', {
     method: 'POST',
     headers: sbHeaders({ Prefer: 'resolution=merge-duplicates' }),
     body: JSON.stringify([{ id, name, picks: picks || {}, scores: scores || {} }])
-  }).catch(() => {});
+  }).then(r => { if (r.ok) sbAfterWrite(); return r.ok; }).catch(() => false);
 }
 
 function sbRemoveParticipant(id) {
-  fetch(SUPABASE.url + '/rest/v1/participants?id=eq.' + encodeURIComponent(id), {
+  cloud.lastWriteAt = Date.now();
+  return fetch(SUPABASE.url + '/rest/v1/participants?id=eq.' + encodeURIComponent(id), {
     method: 'DELETE', headers: sbHeaders()
-  }).catch(() => {});
+  }).then(r => { if (r.ok) sbAfterWrite(); return r.ok; }).catch(() => false);
 }
 
 function sbSaveResults(results, adv, scores) {
-  fetch(SUPABASE.url + '/rest/v1/results?on_conflict=id', {
+  cloud.lastWriteAt = Date.now();
+  return fetch(SUPABASE.url + '/rest/v1/results?on_conflict=id', {
     method: 'POST',
     headers: sbHeaders({ Prefer: 'resolution=merge-duplicates' }),
     body: JSON.stringify([{ id: 1, results: results || {}, adv: adv || {}, scores: scores || {} }])
-  }).catch(() => {});
+  }).then(r => { if (r.ok) sbAfterWrite(); return r.ok; }).catch(() => false);
 }
 
 /* ---- Store API (synchronous reads; cloud kept in an in-memory cache) ---- */
 
 const Store = {
   loadMe() {
-    try { return JSON.parse(localStorage.getItem(KEYS.me) || '{}'); } catch (e) { return {}; }
+    return lsGet(KEYS.me, {});
   },
   saveMe(me) {
-    try { localStorage.setItem(KEYS.me, JSON.stringify(me)); } catch (e) {}
+    lsSet(KEYS.me, me);
   },
   loadResults() {
     if (cloud.enabled && cloud.loaded) return cloud.results;
-    try {
-      const r = JSON.parse(localStorage.getItem(KEYS.results) || '{}');
-      return r && r.results
-        ? { results: r.results, adv: r.adv || {}, scores: r.scores || {} }
-        : { results: r || {}, adv: {}, scores: {} };
-    } catch (e) { return { results: {}, adv: {}, scores: {} }; }
+    const r = lsGet(KEYS.results, {});
+    return r && r.results
+      ? { results: r.results, adv: r.adv || {}, scores: r.scores || {} }
+      : { results: r || {}, adv: {}, scores: {} };
   },
+  /* Returns a promise resolving to true when the write is confirmed
+     (always true in local mode). */
   saveResults(results, adv, scores) {
-    try { localStorage.setItem(KEYS.results, JSON.stringify({ results, adv, scores })); } catch (e) {}
+    lsSet(KEYS.results, { results, adv, scores });
     if (cloud.enabled) {
       cloud.results = { results, adv, scores };
-      sbSaveResults(results, adv, scores);
+      return sbSaveResults(results, adv, scores);
     }
+    return Promise.resolve(true);
   },
   loadBoard() {
     if (cloud.enabled && cloud.loaded) return cloud.board;
-    try { return JSON.parse(localStorage.getItem(KEYS.board) || '{}'); } catch (e) { return {}; }
+    return lsGet(KEYS.board, {});
   },
   upsertParticipant(id, name, picks, scores) {
     const b = this.loadBoard();
     b[id] = { name, picks, scores, submittedAt: b[id] && b[id].submittedAt ? b[id].submittedAt : new Date().toISOString() };
-    try { localStorage.setItem(KEYS.board, JSON.stringify(b)); } catch (e) {}
+    lsSet(KEYS.board, b);
     if (cloud.enabled) {
       cloud.board[id] = b[id];
-      sbUpsertParticipant(id, name, picks, scores);
+      return sbUpsertParticipant(id, name, picks, scores);
     }
+    return Promise.resolve(true);
   },
   removeParticipant(id) {
     const b = this.loadBoard();
     delete b[id];
-    try { localStorage.setItem(KEYS.board, JSON.stringify(b)); } catch (e) {}
+    lsSet(KEYS.board, b);
     if (cloud.enabled) {
       delete cloud.board[id];
-      sbRemoveParticipant(id);
+      return sbRemoveParticipant(id);
     }
+    return Promise.resolve(true);
   },
   loadLang() {
     try { return localStorage.getItem(KEYS.lang) || ''; } catch (e) { return ''; }
@@ -143,19 +176,32 @@ const Store = {
     try { localStorage.setItem(KEYS.lang, lang); } catch (e) {}
   },
   deviceId() {
+    if (this._id) return this._id;
     try {
       let id = localStorage.getItem(KEYS.id);
-      if (!id) { id = 'u' + Math.random().toString(36).slice(2, 10); localStorage.setItem(KEYS.id, id); }
-      return id;
-    } catch (e) { return 'me'; }
+      if (!id) { id = 'u' + Math.random().toString(36).slice(2, 12); localStorage.setItem(KEYS.id, id); }
+      this._id = id;
+    } catch (e) {
+      // Storage blocked (private mode / webview): a per-session random id —
+      // unstable, but never shared between two people like a constant would be.
+      this._id = 'tmp' + Math.random().toString(36).slice(2, 12);
+    }
+    return this._id;
   },
   /* Begin background sync (no-op in local mode). onChange fires whenever
-     another device's data arrives, so the UI can refresh. */
+     shared data changes. Polling pauses while the tab is hidden and resumes
+     with an immediate refresh when it becomes visible again. */
   startSync(onChange) {
-    if (!cloud.enabled) return;
+    if (!cloud.enabled || cloud.started) return;
+    cloud.started = true;
     cloud.onChange = onChange;
     sbFetchAll();
-    setInterval(sbFetchAll, 10000);
+    setInterval(() => { if (!document.hidden) sbFetchAll(); }, POLL_MS);
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) sbFetchAll();
+    });
   },
-  isShared() { return cloud.enabled; }
+  isShared() { return cloud.enabled; },
+  isLoaded() { return !cloud.enabled || cloud.loaded; },
+  refresh() { sbFetchAll(); }
 };

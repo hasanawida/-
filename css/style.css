@@ -309,8 +309,10 @@ button { font-family: inherit; }
 }
 
 /* ---- Exact score inputs ---- */
-.score-row { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 10px; }
-.score-label { font-size: 12.5px; font-weight: 700; color: #8D8375; }
+/* Grid mirrors the 1/X/2 columns: each score box sits under its team's button */
+.score-row { display: grid; grid-template-columns: 1fr 64px 1fr; gap: 8px; align-items: center; margin-top: 4px; }
+.score-row .score-input { justify-self: center; }
+.score-label { display: block; font-size: 12.5px; font-weight: 700; color: #8D8375; text-align: center; margin-top: 10px; }
 .score-input {
   width: 52px; background: #2A241E; border: 1.5px solid rgba(255,255,255,.1); border-radius: 10px;
   padding: 7px 0; text-align: center; font-family: 'Heebo', 'Rubik', sans-serif;
@@ -319,7 +321,7 @@ button { font-family: inherit; }
 .score-input:focus { border-color: #F2B32B; }
 .score-input:disabled { opacity: .55; }
 .score-row.admin .score-input:focus { border-color: #4E7E6B; }
-.score-colon { color: #8D8375; font-weight: 800; }
+.score-colon { color: #8D8375; font-weight: 800; text-align: center; }
 
 /* ---- Standings row expansion (tap a name to see their picks) ---- */
 .board-item { display: flex; flex-direction: column; }
@@ -365,16 +367,19 @@ button { font-family: inherit; }
 .part-row .board-name { flex: 1; }
 .part-meta { font-size: 13px; font-weight: 700; color: #8D8375; }
 .remove-btn {
-  width: 30px; height: 30px; border-radius: 8px; cursor: pointer; flex: none;
+  min-width: 30px; height: 30px; border-radius: 8px; cursor: pointer; flex: none;
   background: rgba(239,142,125,.12); border: 1.5px solid rgba(239,142,125,.4);
   color: #EF8E7D; font-size: 13px; font-weight: 800;
 }
+.remove-btn.armed { background: #EF8E7D; color: #171310; padding: 0 10px; }
+.reset-btn.armed { color: #EF8E7D; font-weight: 800; }
 
 /* ---- Toast ---- */
 .toast {
   position: fixed; bottom: 92px; left: 50%; transform: translateX(-50%);
   background: #4E7E6B; color: #F7F3EC; font-size: 15.5px; font-weight: 700; padding: 12px 22px;
   border-radius: 99px; box-shadow: 0 8px 24px rgba(0,0,0,.45);
-  animation: toastIn .25s ease; white-space: nowrap; z-index: 50;
+  animation: toastIn .25s ease; z-index: 50;
+  max-width: 88vw; text-align: center;
 }
 .toast.error { background: #B3574A; }

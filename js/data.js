@@ -32,7 +32,7 @@ function buildMatches(t, tName) {
     { id: 'qf3', round: t.qf + ' · ' + t.cMiami, date: t.d_qf3, lockAt: Date.parse('2026-07-12T00:00:00+03:00'), home: ['נורווגיה', c('נורווגיה')], away: ['אנגליה', c('אנגליה')] },
     { id: 'qf4', round: t.qf + ' · ' + t.cKC, date: t.d_qf4, home: [tName('ארגנטינה') + ' / ' + tName('מצרים'), TBD_COLORS], away: [tName('שווייץ') + ' / ' + tName('קולומביה'), TBD_COLORS], locked: true, note: t.opensTonight },
     { id: 'sf1', round: t.sf + ' · ' + t.cDallas, date: t.d_sf1, home: [t.winnerQF + ' 1', TBD_COLORS], away: [t.winnerQF + ' 2', TBD_COLORS], locked: true, note: t.opensAfterQF },
-    { id: 'sf2', round: t.sf + ' · ' + t.cAtlanta, date: t.d_sf2, home: [t.winnerQF + ' 3', TBD_COLORS], away: [t.winnerQF + ' 4', TBD_COLORS], locked: true, note: t.opensAfterSF },
+    { id: 'sf2', round: t.sf + ' · ' + t.cAtlanta, date: t.d_sf2, home: [t.winnerQF + ' 3', TBD_COLORS], away: [t.winnerQF + ' 4', TBD_COLORS], locked: true, note: t.opensAfterQF },
     { id: 'fin', round: t.finRound + ' · ' + t.cNJ, date: t.d_fin, home: [t.winnerSF + ' 1', TBD_COLORS], away: [t.winnerSF + ' 2', TBD_COLORS], locked: true, note: t.opensAfterSF }
   ];
 }
