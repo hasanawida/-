@@ -1,0 +1,3302 @@
+{
+  "project": "ardna",
+  "topic": "أرضنا — مصادرة أراضي الطيبة: من 80 ألف دونم إلى أقل من الربع، ومشاريع جديدة تهدد الباقي",
+  "aspect": "9:16",
+  "fps": 30,
+  "theme": "arabic-newsprint",
+  "provider": "placeholder",
+  "plates": "procedural",
+  "parallax": 1.0,
+  "fx": [
+    "dust",
+    "sweep"
+  ],
+  "grain": 22,
+  "tts": {
+    "persona": "documentary_male"
+  },
+  "music": {
+    "path": "auto",
+    "mood": "investigative"
+  },
+  "captions": {
+    "enabled": true,
+    "style": "highlight"
+  },
+  "transitions": {
+    "default": "tear",
+    "dur": 0.45
+  },
+  "beats": [
+    {
+      "id": "b01",
+      "narration": "أرض الطيبة تُسرق، ونحن نايمين. هذي مش شعارات، هذي أرقام رسمية مكتوبة على الورق.",
+      "feel": "alarming breaking-news hook",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 7,
+          "preset": "title",
+          "bg": "red",
+          "camera": "push_in",
+          "headline": "أرض الطيبة تُسرق",
+          "headline_bar": "black",
+          "sub": "وإحنا نايمين",
+          "stamp": "خبر عاجل",
+          "mark": "circle",
+          "transition": "cut",
+          "_layers": [
+            {
+              "type": "headline",
+              "text": "أرض الطيبة تُسرق",
+              "bar": "black",
+              "fill": "white",
+              "size": 0.05,
+              "x": 0.5,
+              "y": 0.42,
+              "rot": -2,
+              "max_w": 0.9,
+              "in": "slam",
+              "at": 0.5
+            },
+            {
+              "type": "headline",
+              "text": "وإحنا نايمين",
+              "bar": "white",
+              "size": 0.046,
+              "x": 0.5,
+              "y": 0.56,
+              "rot": 2,
+              "max_w": 0.86,
+              "in": "pop",
+              "at": 1.8
+            },
+            {
+              "type": "circle",
+              "x": 0.5,
+              "y": 0.42,
+              "w": 0.3,
+              "h": 0.1512,
+              "in": "draw",
+              "at": 2.5,
+              "in_dur": 0.6
+            },
+            {
+              "type": "stamp",
+              "text": "خبر عاجل",
+              "x": 0.74,
+              "y": 0.28,
+              "size": 0.05,
+              "rot": 10,
+              "in": "stamp",
+              "at": 3.2
+            }
+          ],
+          "plate_path": "keyframes/plate_b01a.png",
+          "plate_kind": "procedural",
+          "headline_size": 0.05,
+          "transition_kind": "cut",
+          "transition_dur": 0.0,
+          "render_duration": 7.352,
+          "clip_render": "clips/shot_b01a.mp4",
+          "clip_sig": "698ca0351c2e"
+        }
+      ],
+      "audio_path": "audio/narr_b01.wav",
+      "audio_duration": 7.002,
+      "word_timings": [
+        [
+          0.18,
+          0.482,
+          "أرض"
+        ],
+        [
+          0.482,
+          0.999,
+          "الطيبة"
+        ],
+        [
+          0.999,
+          1.66,
+          "تُسرق،"
+        ],
+        [
+          1.66,
+          2.033,
+          "ونحن"
+        ],
+        [
+          2.033,
+          2.766,
+          "نايمين."
+        ],
+        [
+          2.766,
+          3.067,
+          "هذي"
+        ],
+        [
+          3.067,
+          3.297,
+          "مش"
+        ],
+        [
+          3.297,
+          4.03,
+          "شعارات،"
+        ],
+        [
+          4.03,
+          4.332,
+          "هذي"
+        ],
+        [
+          4.332,
+          4.777,
+          "أرقام"
+        ],
+        [
+          4.777,
+          5.222,
+          "رسمية"
+        ],
+        [
+          5.222,
+          5.739,
+          "مكتوبة"
+        ],
+        [
+          5.739,
+          6.041,
+          "على"
+        ],
+        [
+          6.041,
+          6.702,
+          "الورق."
+        ]
+      ],
+      "narration_cached": "أرض الطيبة تُسرق، ونحن نايمين. هذي مش شعارات، هذي أرقام رسمية مكتوبة على الورق.",
+      "render_duration": 7.352
+    },
+    {
+      "id": "b02",
+      "narration": "عام 1948، كانت مساحة أراضي الطيبة 80 ألف دونم. زراعة، وبيوت، وبيادر.",
+      "feel": "nostalgic factual setup",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 5.5,
+          "preset": "number",
+          "bg": "cream",
+          "camera": "push_in",
+          "value": 80000,
+          "suffix": " دونم",
+          "headline_bar": "yellow",
+          "sub": "مساحة الطيبة عام 1948",
+          "stamp": "1948",
+          "transition": "flip",
+          "_layers": [
+            {
+              "type": "headline",
+              "text": "مساحة الطيبة عام 1948",
+              "bar": "white",
+              "size": 0.046,
+              "x": 0.5,
+              "y": 0.56,
+              "rot": 2,
+              "max_w": 0.86,
+              "in": "pop",
+              "at": 1.8
+            },
+            {
+              "type": "stamp",
+              "text": "1948",
+              "x": 0.5,
+              "y": 0.68,
+              "size": 0.05,
+              "rot": 10,
+              "in": "stamp",
+              "at": 3.2
+            },
+            {
+              "type": "counter",
+              "value": 80000,
+              "prefix": "",
+              "suffix": " دونم",
+              "x": 0.5,
+              "y": 0.4,
+              "at": 0.5,
+              "size": 0.07129999999999999,
+              "bar": "yellow",
+              "in_dur": 1.6
+            }
+          ],
+          "plate_path": "keyframes/plate_b02a.png",
+          "plate_kind": "procedural",
+          "transition_kind": "flip",
+          "transition_dur": 0.45,
+          "render_duration": 5.637,
+          "clip_render": "clips/shot_b02a.mp4",
+          "clip_sig": "7bfabbb3a406"
+        },
+        {
+          "id": "b",
+          "dur": 4,
+          "preset": "title",
+          "bg": "yellow",
+          "camera": "drift",
+          "headline": "زراعة. بيوت. بيادر.",
+          "headline_bar": "black",
+          "transition": "cut",
+          "plate_path": "keyframes/plate_b02b.png",
+          "plate_kind": "procedural",
+          "headline_size": 0.05,
+          "_layers": [
+            {
+              "type": "headline",
+              "text": "زراعة. بيوت. بيادر.",
+              "bar": "black",
+              "fill": "white",
+              "size": 0.05,
+              "x": 0.5,
+              "y": 0.42,
+              "rot": -2,
+              "max_w": 0.9,
+              "in": "slam",
+              "at": 0.5
+            }
+          ],
+          "transition_kind": "cut",
+          "transition_dur": 0.0,
+          "render_duration": 4.099,
+          "clip_render": "clips/shot_b02b.mp4",
+          "clip_sig": "c0fb24e3e0d4"
+        }
+      ],
+      "audio_path": "audio/narr_b02.wav",
+      "audio_duration": 9.386,
+      "word_timings": [
+        [
+          0.18,
+          0.57,
+          "عام"
+        ],
+        [
+          0.57,
+          2.225,
+          "1948،"
+        ],
+        [
+          2.225,
+          2.709,
+          "كانت"
+        ],
+        [
+          2.709,
+          3.285,
+          "مساحة"
+        ],
+        [
+          3.285,
+          3.861,
+          "أراضي"
+        ],
+        [
+          3.861,
+          4.531,
+          "الطيبة"
+        ],
+        [
+          4.531,
+          5.274,
+          "80"
+        ],
+        [
+          5.274,
+          5.665,
+          "ألف"
+        ],
+        [
+          5.665,
+          6.427,
+          "دونم."
+        ],
+        [
+          6.427,
+          7.283,
+          "زراعة،"
+        ],
+        [
+          7.283,
+          8.138,
+          "وبيوت،"
+        ],
+        [
+          8.138,
+          9.086,
+          "وبيادر."
+        ]
+      ],
+      "narration_cached": "عام 1948، كانت مساحة أراضي الطيبة 80 ألف دونم. زراعة، وبيوت، وبيادر.",
+      "render_duration": 9.736
+    },
+    {
+      "id": "b03",
+      "narration": "ثم بدأت المصادرات. الأرض تؤخذ لإقامة المستوطنات المجاورة، قطعة بعد قطعة.",
+      "feel": "threatening machinery",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 6,
+          "preset": "hero_center",
+          "bg": "cream",
+          "camera": "push_in",
+          "headline": "بدأت المصادرات",
+          "headline_bar": "red",
+          "stamp": "مصادرة",
+          "layers": [
+            {
+              "type": "cutout",
+              "image": "assets/bulldozer.png",
+              "x": 0.5,
+              "y": 0.5,
+              "w": 0.68,
+              "rot": -3,
+              "at": 0.1,
+              "path": "elements/el_b03a_2.png"
+            },
+            {
+              "type": "tape",
+              "x": 0.5,
+              "y": 0.32,
+              "w": 0.14,
+              "rot": -7,
+              "at": 0.4
+            }
+          ],
+          "_layers": [
+            {
+              "type": "headline",
+              "text": "بدأت المصادرات",
+              "bar": "red",
+              "fill": "white",
+              "size": 0.062,
+              "x": 0.5,
+              "y": 0.13,
+              "rot": -2,
+              "max_w": 0.9,
+              "in": "slam",
+              "at": 0.5
+            },
+            {
+              "type": "stamp",
+              "text": "مصادرة",
+              "x": 0.76,
+              "y": 0.28,
+              "size": 0.05,
+              "rot": 10,
+              "in": "stamp",
+              "at": 3.2
+            },
+            {
+              "type": "cutout",
+              "image": "assets/bulldozer.png",
+              "x": 0.5,
+              "y": 0.5,
+              "w": 0.68,
+              "rot": -3,
+              "at": 0.1,
+              "path": "elements/el_b03a_2.png"
+            },
+            {
+              "type": "tape",
+              "x": 0.5,
+              "y": 0.32,
+              "w": 0.14,
+              "rot": -7,
+              "at": 0.4
+            }
+          ],
+          "plate_path": "keyframes/plate_b03a.png",
+          "plate_kind": "procedural",
+          "transition_kind": "tear",
+          "transition_dur": 0.45,
+          "render_duration": 6.976,
+          "clip_render": "clips/shot_b03a.mp4",
+          "clip_sig": "ba8797e70a5e"
+        }
+      ],
+      "audio_path": "audio/narr_b03.wav",
+      "audio_duration": 6.626,
+      "word_timings": [
+        [
+          0.18,
+          0.422,
+          "ثم"
+        ],
+        [
+          0.422,
+          0.816,
+          "بدأت"
+        ],
+        [
+          0.816,
+          1.815,
+          "المصادرات."
+        ],
+        [
+          1.815,
+          2.284,
+          "الأرض"
+        ],
+        [
+          2.284,
+          2.678,
+          "تؤخذ"
+        ],
+        [
+          2.678,
+          3.223,
+          "لإقامة"
+        ],
+        [
+          3.223,
+          4.071,
+          "المستوطنات"
+        ],
+        [
+          4.071,
+          4.994,
+          "المجاورة،"
+        ],
+        [
+          4.994,
+          5.388,
+          "قطعة"
+        ],
+        [
+          5.388,
+          5.706,
+          "بعد"
+        ],
+        [
+          5.706,
+          6.326,
+          "قطعة."
+        ]
+      ],
+      "narration_cached": "ثم بدأت المصادرات. الأرض تؤخذ لإقامة المستوطنات المجاورة، قطعة بعد قطعة.",
+      "render_duration": 6.976
+    },
+    {
+      "id": "b04",
+      "narration": "ليف هشارون، حوف هشارون، كاديما تسوران، إفن يهودا. آلاف الدونمات صودرت لكل واحدة منها.",
+      "feel": "documented evidence",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 7,
+          "preset": "stats",
+          "bg": "white",
+          "camera": "static",
+          "headline": "لمن صودرت الأرض؟",
+          "headline_bar": "yellow",
+          "stamp": "وثيقة",
+          "items": [
+            [
+              "ليف هشارون",
+              14480
+            ],
+            [
+              "حوف هشارون",
+              3810
+            ],
+            [
+              "كاديما تسوران",
+              2645
+            ],
+            [
+              "إفن يهودا",
+              705
+            ]
+          ],
+          "transition": "slide",
+          "_layers": [
+            {
+              "type": "headline",
+              "text": "لمن صودرت الأرض؟",
+              "bar": "yellow",
+              "fill": "black",
+              "size": 0.062,
+              "x": 0.5,
+              "y": 0.12,
+              "rot": -2,
+              "max_w": 0.9,
+              "in": "slam",
+              "at": 0.5
+            },
+            {
+              "type": "stamp",
+              "text": "وثيقة",
+              "x": 0.2,
+              "y": 0.24,
+              "size": 0.05,
+              "rot": -12,
+              "in": "stamp",
+              "at": 3.2
+            },
+            {
+              "type": "bars",
+              "items": [
+                [
+                  "ليف هشارون",
+                  14480
+                ],
+                [
+                  "حوف هشارون",
+                  3810
+                ],
+                [
+                  "كاديما تسوران",
+                  2645
+                ],
+                [
+                  "إفن يهودا",
+                  705
+                ]
+              ],
+              "x": 0.5,
+              "y": 0.46,
+              "w": 0.86,
+              "h": 0.36,
+              "at": 0.9,
+              "ink": "ink",
+              "size": 0.026,
+              "label_w": 0.34,
+              "in_dur": 2.0
+            }
+          ],
+          "plate_path": "keyframes/plate_b04a.png",
+          "plate_kind": "procedural",
+          "transition_kind": "slide",
+          "transition_dur": 0.45,
+          "render_duration": 8.667,
+          "clip_render": "clips/shot_b04a.mp4",
+          "clip_sig": "6abaab9aaeb0"
+        }
+      ],
+      "audio_path": "audio/narr_b04.wav",
+      "audio_duration": 8.317,
+      "word_timings": [
+        [
+          0.18,
+          0.513,
+          "ليف"
+        ],
+        [
+          0.513,
+          1.322,
+          "هشارون،"
+        ],
+        [
+          1.322,
+          1.655,
+          "حوف"
+        ],
+        [
+          1.655,
+          2.464,
+          "هشارون،"
+        ],
+        [
+          2.464,
+          3.035,
+          "كاديما"
+        ],
+        [
+          3.035,
+          3.844,
+          "تسوران،"
+        ],
+        [
+          3.844,
+          4.178,
+          "إفن"
+        ],
+        [
+          4.178,
+          4.907,
+          "يهودا."
+        ],
+        [
+          4.907,
+          5.32,
+          "آلاف"
+        ],
+        [
+          5.32,
+          6.049,
+          "الدونمات"
+        ],
+        [
+          6.049,
+          6.541,
+          "صودرت"
+        ],
+        [
+          6.541,
+          6.874,
+          "لكل"
+        ],
+        [
+          6.874,
+          7.366,
+          "واحدة"
+        ],
+        [
+          7.366,
+          8.017,
+          "منها."
+        ]
+      ],
+      "narration_cached": "ليف هشارون، حوف هشارون، كاديما تسوران، إفن يهودا. آلاف الدونمات صودرت لكل واحدة منها.",
+      "render_duration": 8.667
+    },
+    {
+      "id": "b05",
+      "narration": "النتيجة؟ 77.5% من أراضي الطيبة صودرت.",
+      "feel": "shocking statistic",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 6,
+          "preset": "number",
+          "bg": "red",
+          "camera": "push_in",
+          "headline_bar": "black",
+          "layers": [
+            {
+              "type": "headline",
+              "text": "من الأراضي صودرت",
+              "bar": "white",
+              "size": 0.046,
+              "x": 0.5,
+              "y": 0.24,
+              "rot": 2,
+              "in": "pop",
+              "at": 1.8,
+              "max_w": 0.86
+            },
+            {
+              "type": "counter",
+              "value": 77.5,
+              "suffix": "%",
+              "decimals": 1,
+              "x": 0.5,
+              "y": 0.4,
+              "size": 0.085,
+              "bar": "black",
+              "at": 0.5,
+              "in_dur": 1.6
+            },
+            {
+              "type": "cutout",
+              "image": "assets/donut.png",
+              "remove_bg": false,
+              "x": 0.5,
+              "y": 0.6,
+              "w": 0.3,
+              "rot": 0,
+              "at": 1.0,
+              "in": "pop",
+              "path": "elements/el_b05a_3.png"
+            }
+          ],
+          "plate_path": "keyframes/plate_b05a.png",
+          "plate_kind": "procedural",
+          "_layers": [
+            {
+              "type": "headline",
+              "text": "من الأراضي صودرت",
+              "bar": "white",
+              "size": 0.046,
+              "x": 0.5,
+              "y": 0.24,
+              "rot": 2,
+              "in": "pop",
+              "at": 1.8,
+              "max_w": 0.86
+            },
+            {
+              "type": "counter",
+              "value": 77.5,
+              "suffix": "%",
+              "decimals": 1,
+              "x": 0.5,
+              "y": 0.4,
+              "size": 0.085,
+              "bar": "black",
+              "at": 0.5,
+              "in_dur": 1.6
+            },
+            {
+              "type": "cutout",
+              "image": "assets/donut.png",
+              "remove_bg": false,
+              "x": 0.5,
+              "y": 0.6,
+              "w": 0.3,
+              "rot": 0,
+              "at": 1.0,
+              "in": "pop",
+              "path": "elements/el_b05a_3.png"
+            }
+          ],
+          "transition_kind": "tear",
+          "transition_dur": 0.45,
+          "render_duration": 6.0,
+          "clip_render": "clips/shot_b05a.mp4",
+          "clip_sig": "4691c37e1176"
+        }
+      ],
+      "audio_path": "audio/narr_b05.wav",
+      "audio_duration": 5.037,
+      "word_timings": [
+        [
+          0.18,
+          1.213,
+          "النتيجة؟"
+        ],
+        [
+          1.213,
+          2.357,
+          "77.5%"
+        ],
+        [
+          2.357,
+          2.652,
+          "من"
+        ],
+        [
+          2.652,
+          3.224,
+          "أراضي"
+        ],
+        [
+          3.224,
+          3.888,
+          "الطيبة"
+        ],
+        [
+          3.888,
+          4.737,
+          "صودرت."
+        ]
+      ],
+      "narration_cached": "النتيجة؟ 77.5% من أراضي الطيبة صودرت.",
+      "render_duration": 6.0
+    },
+    {
+      "id": "b06",
+      "narration": "يعني من كل أربعة دونمات، ثلاثة راحت. وبقي لنا أقل من الربع.",
+      "feel": "sinking realization",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 5.5,
+          "preset": "quote",
+          "bg": "black",
+          "camera": "drift",
+          "headline": "3 من كل 4 دونمات راحت",
+          "headline_bar": "red",
+          "sub": "بقي أقل من الربع",
+          "mark": "underline",
+          "_layers": [
+            {
+              "type": "bigquote",
+              "x": 0.84,
+              "y": 0.22,
+              "at": 0.2,
+              "size": 0.3
+            },
+            {
+              "type": "headline",
+              "text": "3 من كل 4 دونمات راحت",
+              "bar": "red",
+              "fill": "white",
+              "size": 0.062,
+              "x": 0.5,
+              "y": 0.44,
+              "rot": -2,
+              "max_w": 0.9,
+              "in": "slam",
+              "at": 0.5
+            },
+            {
+              "type": "headline",
+              "text": "بقي أقل من الربع",
+              "bar": "white",
+              "size": 0.046,
+              "x": 0.5,
+              "y": 0.6,
+              "rot": 2,
+              "max_w": 0.8,
+              "in": "pop",
+              "at": 1.8
+            },
+            {
+              "type": "underline",
+              "x": 0.5,
+              "y": 0.48960000000000004,
+              "w": 0.6,
+              "in": "draw",
+              "at": 2.5
+            }
+          ],
+          "plate_path": "keyframes/plate_b06a.png",
+          "plate_kind": "procedural",
+          "transition_kind": "tear",
+          "transition_dur": 0.45,
+          "render_duration": 5.797,
+          "clip_render": "clips/shot_b06a.mp4",
+          "clip_sig": "8edba05f9c5a"
+        }
+      ],
+      "audio_path": "audio/narr_b06.wav",
+      "audio_duration": 5.447,
+      "word_timings": [
+        [
+          0.18,
+          0.558,
+          "يعني"
+        ],
+        [
+          0.558,
+          0.79,
+          "من"
+        ],
+        [
+          0.79,
+          1.022,
+          "كل"
+        ],
+        [
+          1.022,
+          1.473,
+          "أربعة"
+        ],
+        [
+          1.473,
+          2.213,
+          "دونمات،"
+        ],
+        [
+          2.213,
+          2.663,
+          "ثلاثة"
+        ],
+        [
+          2.663,
+          3.259,
+          "راحت."
+        ],
+        [
+          3.259,
+          3.636,
+          "وبقي"
+        ],
+        [
+          3.636,
+          3.941,
+          "لنا"
+        ],
+        [
+          3.941,
+          4.246,
+          "أقل"
+        ],
+        [
+          4.246,
+          4.479,
+          "من"
+        ],
+        [
+          4.479,
+          5.147,
+          "الربع."
+        ]
+      ],
+      "narration_cached": "يعني من كل أربعة دونمات، ثلاثة راحت. وبقي لنا أقل من الربع.",
+      "render_duration": 5.797
+    },
+    {
+      "id": "b07",
+      "narration": "كل الباقي اليوم: 18774 دونماً فقط، حسب الخارطة الهيكلية رقم 3400.",
+      "feel": "cold official number",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 6,
+          "preset": "number",
+          "bg": "cream",
+          "camera": "pull_out",
+          "value": 18774,
+          "suffix": " دونم",
+          "headline_bar": "yellow",
+          "sub": "كل ما تبقى لنا اليوم",
+          "stamp": "ط.ب/3400",
+          "transition": "flip",
+          "_layers": [
+            {
+              "type": "headline",
+              "text": "كل ما تبقى لنا اليوم",
+              "bar": "white",
+              "size": 0.046,
+              "x": 0.5,
+              "y": 0.56,
+              "rot": 2,
+              "max_w": 0.86,
+              "in": "pop",
+              "at": 1.8
+            },
+            {
+              "type": "stamp",
+              "text": "ط.ب/3400",
+              "x": 0.5,
+              "y": 0.68,
+              "size": 0.05,
+              "rot": 10,
+              "in": "stamp",
+              "at": 3.2
+            },
+            {
+              "type": "counter",
+              "value": 18774,
+              "prefix": "",
+              "suffix": " دونم",
+              "x": 0.5,
+              "y": 0.4,
+              "at": 0.5,
+              "size": 0.07129999999999999,
+              "bar": "yellow",
+              "in_dur": 1.6
+            }
+          ],
+          "plate_path": "keyframes/plate_b07a.png",
+          "plate_kind": "procedural",
+          "transition_kind": "flip",
+          "transition_dur": 0.45,
+          "render_duration": 6.546,
+          "clip_render": "clips/shot_b07a.mp4",
+          "clip_sig": "9bc8c53852dc"
+        },
+        {
+          "id": "b",
+          "dur": 5.5,
+          "preset": "quote",
+          "bg": "black",
+          "camera": "drift",
+          "headline": "هذا كل ما تبقى",
+          "headline_bar": "red",
+          "sub": "الخارطة الهيكلية رقم 3400",
+          "transition": "cut",
+          "_layers": [
+            {
+              "type": "bigquote",
+              "x": 0.84,
+              "y": 0.22,
+              "at": 0.2,
+              "size": 0.3
+            },
+            {
+              "type": "headline",
+              "text": "هذا كل ما تبقى",
+              "bar": "red",
+              "fill": "white",
+              "size": 0.062,
+              "x": 0.5,
+              "y": 0.44,
+              "rot": -2,
+              "max_w": 0.9,
+              "in": "slam",
+              "at": 0.5
+            },
+            {
+              "type": "headline",
+              "text": "الخارطة الهيكلية رقم 3400",
+              "bar": "white",
+              "size": 0.046,
+              "x": 0.5,
+              "y": 0.6,
+              "rot": 2,
+              "max_w": 0.8,
+              "in": "pop",
+              "at": 1.8
+            }
+          ],
+          "plate_path": "keyframes/plate_b07b.png",
+          "plate_kind": "procedural",
+          "transition_kind": "cut",
+          "transition_dur": 0.0,
+          "render_duration": 6.001,
+          "clip_render": "clips/shot_b07b.mp4",
+          "clip_sig": "ef84b6ec6d9a"
+        }
+      ],
+      "audio_path": "audio/narr_b07.wav",
+      "audio_duration": 12.197,
+      "word_timings": [
+        [
+          0.18,
+          0.571,
+          "كل"
+        ],
+        [
+          0.571,
+          1.452,
+          "الباقي"
+        ],
+        [
+          1.452,
+          2.577,
+          "اليوم:"
+        ],
+        [
+          2.577,
+          4.803,
+          "18774"
+        ],
+        [
+          4.803,
+          5.684,
+          "دونماً"
+        ],
+        [
+          5.684,
+          6.564,
+          "فقط،"
+        ],
+        [
+          6.564,
+          7.078,
+          "حسب"
+        ],
+        [
+          7.078,
+          8.081,
+          "الخارطة"
+        ],
+        [
+          8.081,
+          9.206,
+          "الهيكلية"
+        ],
+        [
+          9.206,
+          9.72,
+          "رقم"
+        ],
+        [
+          9.72,
+          11.897,
+          "3400."
+        ]
+      ],
+      "narration_cached": "كل الباقي اليوم: 18774 دونماً فقط، حسب الخارطة الهيكلية رقم 3400.",
+      "render_duration": 12.547
+    },
+    {
+      "id": "b08",
+      "narration": "وحتى هذا الباقي مش كله إلنا فعلياً. أرض البناء والسكن؟ أقل من خمسة آلاف دونم.",
+      "feel": "constrained breakdown",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 7,
+          "preset": "stats",
+          "bg": "white",
+          "camera": "static",
+          "headline": "كيف يتوزع الباقي؟",
+          "headline_bar": "yellow",
+          "stamp": "رسمي",
+          "items": [
+            [
+              "أرض للبناء",
+              4907
+            ],
+            [
+              "شوارع ومرافق",
+              3080
+            ],
+            [
+              "زراعة مقيّدة",
+              3696
+            ],
+            [
+              "قيد التأهيل",
+              4000
+            ]
+          ],
+          "transition": "slide",
+          "_layers": [
+            {
+              "type": "headline",
+              "text": "كيف يتوزع الباقي؟",
+              "bar": "yellow",
+              "fill": "black",
+              "size": 0.062,
+              "x": 0.5,
+              "y": 0.12,
+              "rot": -2,
+              "max_w": 0.9,
+              "in": "slam",
+              "at": 0.5
+            },
+            {
+              "type": "stamp",
+              "text": "رسمي",
+              "x": 0.2,
+              "y": 0.24,
+              "size": 0.05,
+              "rot": -12,
+              "in": "stamp",
+              "at": 3.2
+            },
+            {
+              "type": "bars",
+              "items": [
+                [
+                  "أرض للبناء",
+                  4907
+                ],
+                [
+                  "شوارع ومرافق",
+                  3080
+                ],
+                [
+                  "زراعة مقيّدة",
+                  3696
+                ],
+                [
+                  "قيد التأهيل",
+                  4000
+                ]
+              ],
+              "x": 0.5,
+              "y": 0.46,
+              "w": 0.86,
+              "h": 0.36,
+              "at": 0.9,
+              "ink": "ink",
+              "size": 0.026,
+              "label_w": 0.34,
+              "in_dur": 2.0
+            }
+          ],
+          "plate_path": "keyframes/plate_b08a.png",
+          "plate_kind": "procedural",
+          "transition_kind": "slide",
+          "transition_dur": 0.45,
+          "render_duration": 7.757,
+          "clip_render": "clips/shot_b08a.mp4",
+          "clip_sig": "089648d21235"
+        }
+      ],
+      "audio_path": "audio/narr_b08.wav",
+      "audio_duration": 7.407,
+      "word_timings": [
+        [
+          0.18,
+          0.594,
+          "وحتى"
+        ],
+        [
+          0.594,
+          0.928,
+          "هذا"
+        ],
+        [
+          0.928,
+          1.502,
+          "الباقي"
+        ],
+        [
+          1.502,
+          1.756,
+          "مش"
+        ],
+        [
+          1.756,
+          2.091,
+          "كله"
+        ],
+        [
+          2.091,
+          2.505,
+          "إلنا"
+        ],
+        [
+          2.505,
+          3.317,
+          "فعلياً."
+        ],
+        [
+          3.317,
+          3.651,
+          "أرض"
+        ],
+        [
+          3.651,
+          4.225,
+          "البناء"
+        ],
+        [
+          4.225,
+          5.037,
+          "والسكن؟"
+        ],
+        [
+          5.037,
+          5.371,
+          "أقل"
+        ],
+        [
+          5.371,
+          5.626,
+          "من"
+        ],
+        [
+          5.626,
+          6.04,
+          "خمسة"
+        ],
+        [
+          6.04,
+          6.454,
+          "آلاف"
+        ],
+        [
+          6.454,
+          7.107,
+          "دونم."
+        ]
+      ],
+      "narration_cached": "وحتى هذا الباقي مش كله إلنا فعلياً. أرض البناء والسكن؟ أقل من خمسة آلاف دونم.",
+      "render_duration": 7.757
+    },
+    {
+      "id": "b09",
+      "narration": "والبقية موزعة بين مناطق ممنوع البناء فيها، وحزام كهرباء، وشوارع وسكة حديد تقضم الأرض قضماً.",
+      "feel": "restrictions everywhere",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 7,
+          "preset": "checklist",
+          "bg": "cream",
+          "camera": "drift",
+          "headline": "قيود على ما تبقى",
+          "headline_bar": "red",
+          "items": [
+            [
+              "ضفاف الوديان: ممنوع البناء",
+              false
+            ],
+            [
+              "حزام كهرباء يمنع البناء",
+              false
+            ],
+            [
+              "شوارع وسكك تقضم الأرض",
+              false
+            ]
+          ],
+          "plate_path": "keyframes/plate_b09a.png",
+          "plate_kind": "procedural",
+          "_layers": [
+            {
+              "type": "headline",
+              "text": "قيود على ما تبقى",
+              "bar": "red",
+              "fill": "white",
+              "size": 0.062,
+              "x": 0.5,
+              "y": 0.13,
+              "rot": -2,
+              "max_w": 0.9,
+              "in": "slam",
+              "at": 0.5
+            },
+            {
+              "type": "headline",
+              "text": "ضفاف الوديان: ممنوع البناء",
+              "bar": "white",
+              "size": 0.046,
+              "x": 0.56,
+              "y": 0.32,
+              "rot": -1.5,
+              "max_w": 0.7,
+              "in": "slam",
+              "at": 0.8
+            },
+            {
+              "type": "cross",
+              "x": 0.12,
+              "y": 0.32,
+              "size": 0.08,
+              "at": 1.15
+            },
+            {
+              "type": "headline",
+              "text": "حزام كهرباء يمنع البناء",
+              "bar": "white",
+              "size": 0.046,
+              "x": 0.56,
+              "y": 0.44,
+              "rot": 1.5,
+              "max_w": 0.7,
+              "in": "slam",
+              "at": 1.6
+            },
+            {
+              "type": "cross",
+              "x": 0.12,
+              "y": 0.44,
+              "size": 0.08,
+              "at": 1.9500000000000002
+            },
+            {
+              "type": "headline",
+              "text": "شوارع وسكك تقضم الأرض",
+              "bar": "white",
+              "size": 0.046,
+              "x": 0.56,
+              "y": 0.56,
+              "rot": -1.5,
+              "max_w": 0.7,
+              "in": "slam",
+              "at": 2.4000000000000004
+            },
+            {
+              "type": "cross",
+              "x": 0.12,
+              "y": 0.56,
+              "size": 0.08,
+              "at": 2.7500000000000004
+            }
+          ],
+          "transition_kind": "tear",
+          "transition_dur": 0.45,
+          "render_duration": 9.042,
+          "clip_render": "clips/shot_b09a.mp4",
+          "clip_sig": "3bde6bc7a232"
+        }
+      ],
+      "audio_path": "audio/narr_b09.wav",
+      "audio_duration": 8.692,
+      "word_timings": [
+        [
+          0.18,
+          0.847,
+          "والبقية"
+        ],
+        [
+          0.847,
+          1.351,
+          "موزعة"
+        ],
+        [
+          1.351,
+          1.692,
+          "بين"
+        ],
+        [
+          1.692,
+          2.196,
+          "مناطق"
+        ],
+        [
+          2.196,
+          2.701,
+          "ممنوع"
+        ],
+        [
+          2.701,
+          3.286,
+          "البناء"
+        ],
+        [
+          3.286,
+          3.953,
+          "فيها،"
+        ],
+        [
+          3.953,
+          4.457,
+          "وحزام"
+        ],
+        [
+          4.457,
+          5.286,
+          "كهرباء،"
+        ],
+        [
+          5.286,
+          5.872,
+          "وشوارع"
+        ],
+        [
+          5.872,
+          6.295,
+          "وسكة"
+        ],
+        [
+          6.295,
+          6.717,
+          "حديد"
+        ],
+        [
+          6.717,
+          7.14,
+          "تقضم"
+        ],
+        [
+          7.14,
+          7.644,
+          "الأرض"
+        ],
+        [
+          7.644,
+          8.392,
+          "قضماً."
+        ]
+      ],
+      "narration_cached": "والبقية موزعة بين مناطق ممنوع البناء فيها، وحزام كهرباء، وشوارع وسكة حديد تقضم الأرض قضماً.",
+      "render_duration": 9.042
+    },
+    {
+      "id": "b10",
+      "narration": "وكأن كل هذا لا يكفي. اليوم، يخططون لمصادرة ما تبقى.",
+      "feel": "ominous chapter turn",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 5,
+          "preset": "title",
+          "bg": "black",
+          "camera": "push_in",
+          "headline": "ما يخططون لمصادرته",
+          "headline_bar": "red",
+          "stamp": "تحذير",
+          "mark": "circle",
+          "transition": "tear",
+          "_layers": [
+            {
+              "type": "headline",
+              "text": "ما يخططون لمصادرته",
+              "bar": "red",
+              "fill": "white",
+              "size": 0.062,
+              "x": 0.5,
+              "y": 0.42,
+              "rot": -2,
+              "max_w": 0.9,
+              "in": "slam",
+              "at": 0.5
+            },
+            {
+              "type": "circle",
+              "x": 0.5,
+              "y": 0.42,
+              "w": 0.3,
+              "h": 0.1512,
+              "in": "draw",
+              "at": 2.5,
+              "in_dur": 0.6
+            },
+            {
+              "type": "stamp",
+              "text": "تحذير",
+              "x": 0.74,
+              "y": 0.28,
+              "size": 0.05,
+              "rot": 10,
+              "in": "stamp",
+              "at": 3.2
+            }
+          ],
+          "plate_path": "keyframes/plate_b10a.png",
+          "plate_kind": "procedural",
+          "transition_kind": "tear",
+          "transition_dur": 0.45,
+          "render_duration": 5.598,
+          "clip_render": "clips/shot_b10a.mp4",
+          "clip_sig": "af7dd8cc77a2"
+        }
+      ],
+      "audio_path": "audio/narr_b10.wav",
+      "audio_duration": 5.248,
+      "word_timings": [
+        [
+          0.18,
+          0.593,
+          "وكأن"
+        ],
+        [
+          0.593,
+          0.847,
+          "كل"
+        ],
+        [
+          0.847,
+          1.181,
+          "هذا"
+        ],
+        [
+          1.181,
+          1.435,
+          "لا"
+        ],
+        [
+          1.435,
+          2.087,
+          "يكفي."
+        ],
+        [
+          2.087,
+          2.818,
+          "اليوم،"
+        ],
+        [
+          2.818,
+          3.39,
+          "يخططون"
+        ],
+        [
+          3.39,
+          4.042,
+          "لمصادرة"
+        ],
+        [
+          4.042,
+          4.296,
+          "ما"
+        ],
+        [
+          4.296,
+          4.948,
+          "تبقى."
+        ]
+      ],
+      "narration_cached": "وكأن كل هذا لا يكفي. اليوم، يخططون لمصادرة ما تبقى.",
+      "render_duration": 5.598
+    },
+    {
+      "id": "b11",
+      "narration": "المشروع الأول: مكب نفايات ضخم، يلتهم 2099 دونماً أخرى من أراضينا.",
+      "feel": "first threat revealed",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 6.5,
+          "preset": "hero_center",
+          "bg": "cream",
+          "camera": "push_in",
+          "headline": "مشروع مكب النفايات",
+          "headline_bar": "red",
+          "sub": "يلتهم 2099 دونماً أخرى",
+          "stamp": "خطر",
+          "layers": [
+            {
+              "type": "cutout",
+              "image": "assets/garbage.png",
+              "x": 0.5,
+              "y": 0.48,
+              "w": 0.66,
+              "rot": -2,
+              "at": 0.1,
+              "path": "elements/el_b11a_3.png"
+            }
+          ],
+          "_layers": [
+            {
+              "type": "headline",
+              "text": "مشروع مكب النفايات",
+              "bar": "red",
+              "fill": "white",
+              "size": 0.062,
+              "x": 0.5,
+              "y": 0.13,
+              "rot": -2,
+              "max_w": 0.9,
+              "in": "slam",
+              "at": 0.5
+            },
+            {
+              "type": "headline",
+              "text": "يلتهم 2099 دونماً أخرى",
+              "bar": "white",
+              "size": 0.046,
+              "x": 0.5,
+              "y": 0.71,
+              "rot": 2,
+              "max_w": 0.86,
+              "in": "pop",
+              "at": 1.8
+            },
+            {
+              "type": "stamp",
+              "text": "خطر",
+              "x": 0.76,
+              "y": 0.28,
+              "size": 0.05,
+              "rot": 10,
+              "in": "stamp",
+              "at": 3.2
+            },
+            {
+              "type": "cutout",
+              "image": "assets/garbage.png",
+              "x": 0.5,
+              "y": 0.48,
+              "w": 0.66,
+              "rot": -2,
+              "at": 0.1,
+              "path": "elements/el_b11a_3.png"
+            }
+          ],
+          "plate_path": "keyframes/plate_b11a.png",
+          "plate_kind": "procedural",
+          "transition_kind": "tear",
+          "transition_dur": 0.45,
+          "render_duration": 8.818,
+          "clip_render": "clips/shot_b11a.mp4",
+          "clip_sig": "a9c51a10cd2c"
+        }
+      ],
+      "audio_path": "audio/narr_b11.wav",
+      "audio_duration": 8.468,
+      "word_timings": [
+        [
+          0.18,
+          0.962,
+          "المشروع"
+        ],
+        [
+          0.962,
+          1.839,
+          "الأول:"
+        ],
+        [
+          1.839,
+          2.239,
+          "مكب"
+        ],
+        [
+          2.239,
+          2.925,
+          "نفايات"
+        ],
+        [
+          2.925,
+          3.611,
+          "ضخم،"
+        ],
+        [
+          3.611,
+          4.202,
+          "يلتهم"
+        ],
+        [
+          4.202,
+          5.613,
+          "2099"
+        ],
+        [
+          5.613,
+          6.299,
+          "دونماً"
+        ],
+        [
+          6.299,
+          6.795,
+          "أخرى"
+        ],
+        [
+          6.795,
+          7.1,
+          "من"
+        ],
+        [
+          7.1,
+          8.168,
+          "أراضينا."
+        ]
+      ],
+      "narration_cached": "المشروع الأول: مكب نفايات ضخم، يلتهم 2099 دونماً أخرى من أراضينا.",
+      "render_duration": 8.818
+    },
+    {
+      "id": "b12",
+      "narration": "هذا وحده يعني خسارة 11.2% من الأرض المتبقية أصلاً.",
+      "feel": "percentage punch",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 5,
+          "preset": "number",
+          "bg": "yellow",
+          "camera": "drift",
+          "headline_bar": "red",
+          "sub": "من المتبقي أصلاً",
+          "stamp": "مكب النفايات",
+          "plate_path": "keyframes/plate_b12a.png",
+          "plate_kind": "procedural",
+          "layers": [
+            {
+              "type": "counter",
+              "value": 11.2,
+              "suffix": "%",
+              "decimals": 1,
+              "x": 0.5,
+              "y": 0.4,
+              "size": 0.08,
+              "bar": "red",
+              "at": 0.5,
+              "in_dur": 1.6
+            }
+          ],
+          "_layers": [
+            {
+              "type": "headline",
+              "text": "من المتبقي أصلاً",
+              "bar": "white",
+              "size": 0.046,
+              "x": 0.5,
+              "y": 0.56,
+              "rot": 2,
+              "max_w": 0.86,
+              "in": "pop",
+              "at": 1.8
+            },
+            {
+              "type": "stamp",
+              "text": "مكب النفايات",
+              "x": 0.5,
+              "y": 0.68,
+              "size": 0.05,
+              "rot": 10,
+              "in": "stamp",
+              "at": 3.2
+            },
+            {
+              "type": "counter",
+              "value": 11.2,
+              "suffix": "%",
+              "decimals": 1,
+              "x": 0.5,
+              "y": 0.4,
+              "size": 0.08,
+              "bar": "red",
+              "at": 0.5,
+              "in_dur": 1.6
+            }
+          ],
+          "transition_kind": "tear",
+          "transition_dur": 0.45,
+          "render_duration": 7.026,
+          "clip_render": "clips/shot_b12a.mp4",
+          "clip_sig": "fb470c3927a8"
+        }
+      ],
+      "audio_path": "audio/narr_b12.wav",
+      "audio_duration": 6.676,
+      "word_timings": [
+        [
+          0.18,
+          0.607,
+          "هذا"
+        ],
+        [
+          0.607,
+          1.135,
+          "وحده"
+        ],
+        [
+          1.135,
+          1.663,
+          "يعني"
+        ],
+        [
+          1.663,
+          2.293,
+          "خسارة"
+        ],
+        [
+          2.293,
+          3.552,
+          "11.2%"
+        ],
+        [
+          3.552,
+          3.877,
+          "من"
+        ],
+        [
+          3.877,
+          4.507,
+          "الأرض"
+        ],
+        [
+          4.507,
+          5.441,
+          "المتبقية"
+        ],
+        [
+          5.441,
+          6.376,
+          "أصلاً."
+        ]
+      ],
+      "narration_cached": "هذا وحده يعني خسارة 11.2% من الأرض المتبقية أصلاً.",
+      "render_duration": 7.026
+    },
+    {
+      "id": "b13",
+      "narration": "المشروع الثاني: شارع 444 الالتفافي وشارع 553. 1900 دونم إضافية تختفي تحت الإسفلت.",
+      "feel": "second threat revealed",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 7,
+          "preset": "hero_center",
+          "bg": "cream",
+          "camera": "pan_r",
+          "headline": "شارع 444 وشارع 553",
+          "headline_bar": "red",
+          "sub": "يلتهم 1900 دونم أخرى",
+          "stamp": "مصادرة",
+          "layers": [
+            {
+              "type": "cutout",
+              "image": "assets/traffic.png",
+              "x": 0.5,
+              "y": 0.48,
+              "w": 0.6,
+              "rot": 2,
+              "at": 0.1,
+              "remove_bg": false,
+              "path": "elements/el_b13a_3.png"
+            }
+          ],
+          "plate_path": "keyframes/plate_b13a.png",
+          "plate_kind": "procedural",
+          "_layers": [
+            {
+              "type": "headline",
+              "text": "شارع 444 وشارع 553",
+              "bar": "red",
+              "fill": "white",
+              "size": 0.062,
+              "x": 0.5,
+              "y": 0.13,
+              "rot": -2,
+              "max_w": 0.9,
+              "in": "slam",
+              "at": 0.5
+            },
+            {
+              "type": "headline",
+              "text": "يلتهم 1900 دونم أخرى",
+              "bar": "white",
+              "size": 0.046,
+              "x": 0.5,
+              "y": 0.71,
+              "rot": 2,
+              "max_w": 0.86,
+              "in": "pop",
+              "at": 1.8
+            },
+            {
+              "type": "stamp",
+              "text": "مصادرة",
+              "x": 0.76,
+              "y": 0.28,
+              "size": 0.05,
+              "rot": 10,
+              "in": "stamp",
+              "at": 3.2
+            },
+            {
+              "type": "cutout",
+              "image": "assets/traffic.png",
+              "x": 0.5,
+              "y": 0.48,
+              "w": 0.6,
+              "rot": 2,
+              "at": 0.1,
+              "remove_bg": false,
+              "path": "elements/el_b13a_3.png"
+            }
+          ],
+          "transition_kind": "tear",
+          "transition_dur": 0.45,
+          "render_duration": 7.389,
+          "clip_render": "clips/shot_b13a.mp4",
+          "clip_sig": "6bf7c0b269e0"
+        },
+        {
+          "id": "b",
+          "dur": 5.5,
+          "preset": "number",
+          "bg": "yellow",
+          "camera": "push_in",
+          "value": 1900,
+          "suffix": " دونم",
+          "headline_bar": "red",
+          "sub": "تختفي تحت الإسفلت",
+          "stamp": "شارع 444",
+          "transition": "cut",
+          "_layers": [
+            {
+              "type": "headline",
+              "text": "تختفي تحت الإسفلت",
+              "bar": "white",
+              "size": 0.046,
+              "x": 0.5,
+              "y": 0.56,
+              "rot": 2,
+              "max_w": 0.86,
+              "in": "pop",
+              "at": 1.8
+            },
+            {
+              "type": "stamp",
+              "text": "شارع 444",
+              "x": 0.5,
+              "y": 0.68,
+              "size": 0.05,
+              "rot": 10,
+              "in": "stamp",
+              "at": 3.2
+            },
+            {
+              "type": "counter",
+              "value": 1900,
+              "prefix": "",
+              "suffix": " دونم",
+              "x": 0.5,
+              "y": 0.4,
+              "at": 0.5,
+              "size": 0.07129999999999999,
+              "bar": "red",
+              "in_dur": 1.6
+            }
+          ],
+          "plate_path": "keyframes/plate_b13b.png",
+          "plate_kind": "procedural",
+          "transition_kind": "cut",
+          "transition_dur": 0.0,
+          "render_duration": 5.806,
+          "clip_render": "clips/shot_b13b.mp4",
+          "clip_sig": "8791d997e9b3"
+        }
+      ],
+      "audio_path": "audio/narr_b13.wav",
+      "audio_duration": 12.845,
+      "word_timings": [
+        [
+          0.18,
+          1.065,
+          "المشروع"
+        ],
+        [
+          1.065,
+          2.165,
+          "الثاني:"
+        ],
+        [
+          2.165,
+          2.726,
+          "شارع"
+        ],
+        [
+          2.726,
+          3.957,
+          "444"
+        ],
+        [
+          3.957,
+          5.057,
+          "الالتفافي"
+        ],
+        [
+          5.057,
+          5.726,
+          "وشارع"
+        ],
+        [
+          5.726,
+          7.28,
+          "553."
+        ],
+        [
+          7.28,
+          8.877,
+          "1900"
+        ],
+        [
+          8.877,
+          9.438,
+          "دونم"
+        ],
+        [
+          9.438,
+          10.215,
+          "إضافية"
+        ],
+        [
+          10.215,
+          10.884,
+          "تختفي"
+        ],
+        [
+          10.884,
+          11.337,
+          "تحت"
+        ],
+        [
+          11.337,
+          12.545,
+          "الإسفلت."
+        ]
+      ],
+      "narration_cached": "المشروع الثاني: شارع 444 الالتفافي وشارع 553. 1900 دونم إضافية تختفي تحت الإسفلت.",
+      "render_duration": 13.195
+    },
+    {
+      "id": "b14",
+      "narration": "يعني 10.5% أخرى من الباقي. والمشروعان معاً يلتهمان 3999 دونماً من أرضنا.",
+      "feel": "totals adding up",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 6,
+          "preset": "number",
+          "bg": "red",
+          "camera": "push_in",
+          "value": 3999,
+          "suffix": " دونم",
+          "headline_bar": "black",
+          "sub": "مجموع ما يخططون لمصادرته",
+          "stamp": "المخطط",
+          "transition": "slide",
+          "_layers": [
+            {
+              "type": "headline",
+              "text": "مجموع ما يخططون لمصادرته",
+              "bar": "white",
+              "size": 0.046,
+              "x": 0.5,
+              "y": 0.56,
+              "rot": 2,
+              "max_w": 0.86,
+              "in": "pop",
+              "at": 1.8
+            },
+            {
+              "type": "stamp",
+              "text": "المخطط",
+              "x": 0.5,
+              "y": 0.68,
+              "size": 0.05,
+              "rot": 10,
+              "in": "stamp",
+              "at": 3.2
+            },
+            {
+              "type": "counter",
+              "value": 3999,
+              "prefix": "",
+              "suffix": " دونم",
+              "x": 0.5,
+              "y": 0.4,
+              "at": 0.5,
+              "size": 0.07129999999999999,
+              "bar": "black",
+              "in_dur": 1.6
+            }
+          ],
+          "plate_path": "keyframes/plate_b14a.png",
+          "plate_kind": "procedural",
+          "transition_kind": "slide",
+          "transition_dur": 0.45,
+          "render_duration": 6.321,
+          "clip_render": "clips/shot_b14a.mp4",
+          "clip_sig": "8a9ec5980a1c"
+        },
+        {
+          "id": "b",
+          "dur": 5,
+          "preset": "stats",
+          "bg": "white",
+          "camera": "static",
+          "headline": "المشروعان معاً",
+          "headline_bar": "red",
+          "items": [
+            [
+              "مكب النفايات",
+              2099
+            ],
+            [
+              "شارع 444 و553",
+              1900
+            ]
+          ],
+          "transition": "slide",
+          "_layers": [
+            {
+              "type": "headline",
+              "text": "المشروعان معاً",
+              "bar": "red",
+              "fill": "white",
+              "size": 0.062,
+              "x": 0.5,
+              "y": 0.12,
+              "rot": -2,
+              "max_w": 0.9,
+              "in": "slam",
+              "at": 0.5
+            },
+            {
+              "type": "bars",
+              "items": [
+                [
+                  "مكب النفايات",
+                  2099
+                ],
+                [
+                  "شارع 444 و553",
+                  1900
+                ]
+              ],
+              "x": 0.5,
+              "y": 0.46,
+              "w": 0.86,
+              "h": 0.36,
+              "at": 0.9,
+              "ink": "ink",
+              "size": 0.026,
+              "label_w": 0.34,
+              "in_dur": 1.0
+            }
+          ],
+          "plate_path": "keyframes/plate_b14b.png",
+          "plate_kind": "procedural",
+          "transition_kind": "slide",
+          "transition_dur": 0.45,
+          "render_duration": 5.267,
+          "clip_render": "clips/shot_b14b.mp4",
+          "clip_sig": "06e165400e45"
+        }
+      ],
+      "audio_path": "audio/narr_b14.wav",
+      "audio_duration": 11.238,
+      "word_timings": [
+        [
+          0.18,
+          0.768,
+          "يعني"
+        ],
+        [
+          0.768,
+          2.169,
+          "10.5%"
+        ],
+        [
+          2.169,
+          2.757,
+          "أخرى"
+        ],
+        [
+          2.757,
+          3.118,
+          "من"
+        ],
+        [
+          3.118,
+          4.271,
+          "الباقي."
+        ],
+        [
+          4.271,
+          5.537,
+          "والمشروعان"
+        ],
+        [
+          5.537,
+          6.124,
+          "معاً"
+        ],
+        [
+          6.124,
+          7.051,
+          "يلتهمان"
+        ],
+        [
+          7.051,
+          8.723,
+          "3999"
+        ],
+        [
+          8.723,
+          9.537,
+          "دونماً"
+        ],
+        [
+          9.537,
+          9.899,
+          "من"
+        ],
+        [
+          9.899,
+          10.938,
+          "أرضنا."
+        ]
+      ],
+      "narration_cached": "يعني 10.5% أخرى من الباقي. والمشروعان معاً يلتهمان 3999 دونماً من أرضنا.",
+      "render_duration": 11.588
+    },
+    {
+      "id": "b15",
+      "narration": "والمخاطر ما هي بعيدة. هذه المشاريع تعني كارثة يومية على كل بيت في الطيبة.",
+      "feel": "dread chapter turn",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 5.5,
+          "preset": "title",
+          "bg": "black",
+          "camera": "push_in",
+          "headline": "المخاطر والتهديدات",
+          "headline_bar": "red",
+          "stamp": "تحذير",
+          "_layers": [
+            {
+              "type": "headline",
+              "text": "المخاطر والتهديدات",
+              "bar": "red",
+              "fill": "white",
+              "size": 0.062,
+              "x": 0.5,
+              "y": 0.42,
+              "rot": -2,
+              "max_w": 0.9,
+              "in": "slam",
+              "at": 0.5
+            },
+            {
+              "type": "stamp",
+              "text": "تحذير",
+              "x": 0.74,
+              "y": 0.28,
+              "size": 0.05,
+              "rot": 10,
+              "in": "stamp",
+              "at": 3.2
+            }
+          ],
+          "plate_path": "keyframes/plate_b15a.png",
+          "plate_kind": "procedural",
+          "transition_kind": "tear",
+          "transition_dur": 0.45,
+          "render_duration": 7.847,
+          "clip_render": "clips/shot_b15a.mp4",
+          "clip_sig": "5ac8e1a2dbf2"
+        }
+      ],
+      "audio_path": "audio/narr_b15.wav",
+      "audio_duration": 7.497,
+      "word_timings": [
+        [
+          0.18,
+          0.979,
+          "والمخاطر"
+        ],
+        [
+          0.979,
+          1.257,
+          "ما"
+        ],
+        [
+          1.257,
+          1.535,
+          "هي"
+        ],
+        [
+          1.535,
+          2.334,
+          "بعيدة."
+        ],
+        [
+          2.334,
+          2.698,
+          "هذه"
+        ],
+        [
+          2.698,
+          3.497,
+          "المشاريع"
+        ],
+        [
+          3.497,
+          3.949,
+          "تعني"
+        ],
+        [
+          3.949,
+          4.487,
+          "كارثة"
+        ],
+        [
+          4.487,
+          5.026,
+          "يومية"
+        ],
+        [
+          5.026,
+          5.391,
+          "على"
+        ],
+        [
+          5.391,
+          5.669,
+          "كل"
+        ],
+        [
+          5.669,
+          6.033,
+          "بيت"
+        ],
+        [
+          6.033,
+          6.311,
+          "في"
+        ],
+        [
+          6.311,
+          7.197,
+          "الطيبة."
+        ]
+      ],
+      "narration_cached": "والمخاطر ما هي بعيدة. هذه المشاريع تعني كارثة يومية على كل بيت في الطيبة.",
+      "render_duration": 7.847
+    },
+    {
+      "id": "b16",
+      "narration": "تلوث بيئي وصحي. أزمات مرورية. تجريف للأراضي الزراعية. وأزمة سكانية خانقة.",
+      "feel": "cascading dangers",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 7,
+          "preset": "list",
+          "bg": "cream",
+          "camera": "drift",
+          "headline": "ماذا يعني ذلك؟",
+          "headline_bar": "red",
+          "stamp": "مهم",
+          "items": [
+            "التلوث البيئي والصحي",
+            "الأزمات المرورية",
+            "تجريف الأراضي الزراعية",
+            "أزمة سكانية خانقة"
+          ],
+          "_layers": [
+            {
+              "type": "headline",
+              "text": "ماذا يعني ذلك؟",
+              "bar": "red",
+              "fill": "white",
+              "size": 0.062,
+              "x": 0.5,
+              "y": 0.14,
+              "rot": -2,
+              "max_w": 0.9,
+              "in": "slam",
+              "at": 0.5
+            },
+            {
+              "type": "headline",
+              "text": "التلوث البيئي والصحي",
+              "bar": "yellow",
+              "size": 0.046,
+              "x": 0.5,
+              "y": 0.32,
+              "rot": -2,
+              "max_w": 0.86,
+              "in": "slam",
+              "at": 0.8
+            },
+            {
+              "type": "headline",
+              "text": "الأزمات المرورية",
+              "bar": "white",
+              "size": 0.046,
+              "x": 0.5,
+              "y": 0.45,
+              "rot": 2,
+              "max_w": 0.86,
+              "in": "slam",
+              "at": 1.6
+            },
+            {
+              "type": "headline",
+              "text": "تجريف الأراضي الزراعية",
+              "bar": "yellow",
+              "size": 0.046,
+              "x": 0.5,
+              "y": 0.5800000000000001,
+              "rot": -2,
+              "max_w": 0.86,
+              "in": "slam",
+              "at": 2.4000000000000004
+            },
+            {
+              "type": "headline",
+              "text": "أزمة سكانية خانقة",
+              "bar": "white",
+              "size": 0.046,
+              "x": 0.5,
+              "y": 0.71,
+              "rot": 2,
+              "max_w": 0.86,
+              "in": "slam",
+              "at": 3.2
+            },
+            {
+              "type": "stamp",
+              "text": "مهم",
+              "x": 0.76,
+              "y": 0.28,
+              "size": 0.05,
+              "rot": 10,
+              "in": "stamp",
+              "at": 3.2
+            }
+          ],
+          "plate_path": "keyframes/plate_b16a.png",
+          "plate_kind": "procedural",
+          "transition_kind": "tear",
+          "transition_dur": 0.45,
+          "render_duration": 7.855,
+          "clip_render": "clips/shot_b16a.mp4",
+          "clip_sig": "9d162163ea89"
+        }
+      ],
+      "audio_path": "audio/narr_b16.wav",
+      "audio_duration": 7.505,
+      "word_timings": [
+        [
+          0.18,
+          0.614,
+          "تلوث"
+        ],
+        [
+          0.614,
+          1.048,
+          "بيئي"
+        ],
+        [
+          1.048,
+          1.732,
+          "وصحي."
+        ],
+        [
+          1.732,
+          2.249,
+          "أزمات"
+        ],
+        [
+          2.249,
+          3.1,
+          "مرورية."
+        ],
+        [
+          3.1,
+          3.617,
+          "تجريف"
+        ],
+        [
+          3.617,
+          4.302,
+          "للأراضي"
+        ],
+        [
+          4.302,
+          5.319,
+          "الزراعية."
+        ],
+        [
+          5.319,
+          5.837,
+          "وأزمة"
+        ],
+        [
+          5.837,
+          6.437,
+          "سكانية"
+        ],
+        [
+          6.437,
+          7.205,
+          "خانقة."
+        ]
+      ],
+      "narration_cached": "تلوث بيئي وصحي. أزمات مرورية. تجريف للأراضي الزراعية. وأزمة سكانية خانقة.",
+      "render_duration": 7.855
+    },
+    {
+      "id": "b17",
+      "narration": "وتخيلوا: ما يقارب 1000 شاحنة نفايات، كل يوم، على مداخل بلدنا وشوارعها.",
+      "feel": "suffocating traffic",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 6,
+          "preset": "number",
+          "bg": "white",
+          "camera": "push_in",
+          "value": 1000,
+          "suffix": " شاحنة",
+          "headline_bar": "red",
+          "sub": "يومياً على شوارعنا",
+          "stamp": "اختناق",
+          "_layers": [
+            {
+              "type": "headline",
+              "text": "يومياً على شوارعنا",
+              "bar": "white",
+              "size": 0.046,
+              "x": 0.5,
+              "y": 0.56,
+              "rot": 2,
+              "max_w": 0.86,
+              "in": "pop",
+              "at": 1.8
+            },
+            {
+              "type": "stamp",
+              "text": "اختناق",
+              "x": 0.5,
+              "y": 0.68,
+              "size": 0.05,
+              "rot": 10,
+              "in": "stamp",
+              "at": 3.2
+            },
+            {
+              "type": "counter",
+              "value": 1000,
+              "prefix": "",
+              "suffix": " شاحنة",
+              "x": 0.5,
+              "y": 0.4,
+              "at": 0.5,
+              "size": 0.07129999999999999,
+              "bar": "red",
+              "in_dur": 1.6
+            }
+          ],
+          "plate_path": "keyframes/plate_b17a.png",
+          "plate_kind": "procedural",
+          "transition_kind": "tear",
+          "transition_dur": 0.45,
+          "render_duration": 7.188,
+          "clip_render": "clips/shot_b17a.mp4",
+          "clip_sig": "18bb540973e3"
+        }
+      ],
+      "audio_path": "audio/narr_b17.wav",
+      "audio_duration": 6.838,
+      "word_timings": [
+        [
+          0.18,
+          0.963,
+          "وتخيلوا:"
+        ],
+        [
+          0.963,
+          1.186,
+          "ما"
+        ],
+        [
+          1.186,
+          1.619,
+          "يقارب"
+        ],
+        [
+          1.619,
+          2.653,
+          "1000"
+        ],
+        [
+          2.653,
+          3.087,
+          "شاحنة"
+        ],
+        [
+          3.087,
+          3.799,
+          "نفايات،"
+        ],
+        [
+          3.799,
+          4.023,
+          "كل"
+        ],
+        [
+          4.023,
+          4.526,
+          "يوم،"
+        ],
+        [
+          4.526,
+          4.819,
+          "على"
+        ],
+        [
+          4.819,
+          5.253,
+          "مداخل"
+        ],
+        [
+          5.253,
+          5.686,
+          "بلدنا"
+        ],
+        [
+          5.686,
+          6.538,
+          "وشوارعها."
+        ]
+      ],
+      "narration_cached": "وتخيلوا: ما يقارب 1000 شاحنة نفايات، كل يوم، على مداخل بلدنا وشوارعها.",
+      "render_duration": 7.188
+    },
+    {
+      "id": "b18",
+      "narration": "هذه مش مجرد دونمات على خارطة. الأرض رباطنا، وهويتنا، وأمانة أجدادنا، ومستقبل أولادنا.",
+      "feel": "dignified emotional core",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 7,
+          "preset": "hero_center",
+          "bg": "cream",
+          "camera": "push_in",
+          "headline": "رباطنا. هويتنا. أمانتنا.",
+          "headline_bar": "yellow",
+          "tape": true,
+          "layers": [
+            {
+              "type": "cutout",
+              "image": "assets/farmer.png",
+              "x": 0.5,
+              "y": 0.48,
+              "w": 0.52,
+              "rot": -2,
+              "at": 0.1,
+              "path": "elements/el_b18a_2.png"
+            },
+            {
+              "type": "headline",
+              "text": "حاضرنا ومستقبل أولادنا",
+              "bar": "white",
+              "size": 0.04,
+              "x": 0.5,
+              "y": 0.665,
+              "rot": 2,
+              "in": "pop",
+              "at": 1.8,
+              "max_w": 0.8
+            }
+          ],
+          "plate_path": "keyframes/plate_b18a.png",
+          "plate_kind": "procedural",
+          "_layers": [
+            {
+              "type": "headline",
+              "text": "رباطنا. هويتنا. أمانتنا.",
+              "bar": "yellow",
+              "fill": "black",
+              "size": 0.062,
+              "x": 0.5,
+              "y": 0.13,
+              "rot": -2,
+              "max_w": 0.9,
+              "in": "slam",
+              "at": 0.5
+            },
+            {
+              "type": "cutout",
+              "image": "assets/farmer.png",
+              "x": 0.5,
+              "y": 0.48,
+              "w": 0.52,
+              "rot": -2,
+              "at": 0.1,
+              "path": "elements/el_b18a_2.png"
+            },
+            {
+              "type": "headline",
+              "text": "حاضرنا ومستقبل أولادنا",
+              "bar": "white",
+              "size": 0.04,
+              "x": 0.5,
+              "y": 0.665,
+              "rot": 2,
+              "in": "pop",
+              "at": 1.8,
+              "max_w": 0.8
+            }
+          ],
+          "transition_kind": "tear",
+          "transition_dur": 0.45,
+          "render_duration": 9.653,
+          "clip_render": "clips/shot_b18a.mp4",
+          "clip_sig": "8e371ae4745a"
+        }
+      ],
+      "audio_path": "audio/narr_b18.wav",
+      "audio_duration": 9.303,
+      "word_timings": [
+        [
+          0.18,
+          0.556,
+          "هذه"
+        ],
+        [
+          0.556,
+          0.842,
+          "مش"
+        ],
+        [
+          0.842,
+          1.308,
+          "مجرد"
+        ],
+        [
+          1.308,
+          1.952,
+          "دونمات"
+        ],
+        [
+          1.952,
+          2.328,
+          "على"
+        ],
+        [
+          2.328,
+          3.151,
+          "خارطة."
+        ],
+        [
+          3.151,
+          3.706,
+          "الأرض"
+        ],
+        [
+          3.706,
+          4.619,
+          "رباطنا،"
+        ],
+        [
+          4.619,
+          5.621,
+          "وهويتنا،"
+        ],
+        [
+          5.621,
+          6.265,
+          "وأمانة"
+        ],
+        [
+          6.265,
+          7.267,
+          "أجدادنا،"
+        ],
+        [
+          7.267,
+          8.001,
+          "ومستقبل"
+        ],
+        [
+          8.001,
+          9.003,
+          "أولادنا."
+        ]
+      ],
+      "narration_cached": "هذه مش مجرد دونمات على خارطة. الأرض رباطنا، وهويتنا، وأمانة أجدادنا، ومستقبل أولادنا.",
+      "render_duration": 9.653
+    },
+    {
+      "id": "b19",
+      "narration": "من 80 ألف دونم، إلى أقل من 19 ألفاً. وحتى هذه الأرض الأخيرة، يريدونها.",
+      "feel": "shrinking timeline",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 7,
+          "preset": "title",
+          "bg": "white",
+          "camera": "push_in",
+          "headline": "أرضنا تنكمش",
+          "headline_bar": "red",
+          "headline_size": 0.06,
+          "sub": "من 80 ألف دونم إلى 18774 فقط",
+          "stamp": "تنبيه",
+          "mark": "underline",
+          "transition": "slide",
+          "layers": [],
+          "plate_path": "keyframes/plate_b19a.png",
+          "plate_kind": "procedural",
+          "transition_kind": "slide",
+          "transition_dur": 0.45,
+          "render_duration": 9.103,
+          "clip_render": "clips/shot_b19a.mp4",
+          "clip_sig": "5008fe42fa51",
+          "_layers": [
+            {
+              "type": "headline",
+              "text": "أرضنا تنكمش",
+              "bar": "red",
+              "fill": "white",
+              "size": 0.06,
+              "x": 0.5,
+              "y": 0.42,
+              "rot": -2,
+              "max_w": 0.9,
+              "in": "slam",
+              "at": 0.5
+            },
+            {
+              "type": "headline",
+              "text": "من 80 ألف دونم إلى 18774 فقط",
+              "bar": "white",
+              "size": 0.046,
+              "x": 0.5,
+              "y": 0.56,
+              "rot": 2,
+              "max_w": 0.86,
+              "in": "pop",
+              "at": 1.8
+            },
+            {
+              "type": "underline",
+              "x": 0.5,
+              "y": 0.46799999999999997,
+              "w": 0.6,
+              "in": "draw",
+              "at": 2.5
+            },
+            {
+              "type": "stamp",
+              "text": "تنبيه",
+              "x": 0.74,
+              "y": 0.28,
+              "size": 0.05,
+              "rot": 10,
+              "in": "stamp",
+              "at": 3.2
+            }
+          ]
+        }
+      ],
+      "audio_path": "audio/narr_b19.wav",
+      "audio_duration": 8.753,
+      "word_timings": [
+        [
+          0.18,
+          0.47,
+          "من"
+        ],
+        [
+          0.47,
+          1.194,
+          "80"
+        ],
+        [
+          1.194,
+          1.574,
+          "ألف"
+        ],
+        [
+          1.574,
+          2.316,
+          "دونم،"
+        ],
+        [
+          2.316,
+          2.696,
+          "إلى"
+        ],
+        [
+          2.696,
+          3.076,
+          "أقل"
+        ],
+        [
+          3.076,
+          3.366,
+          "من"
+        ],
+        [
+          3.366,
+          4.09,
+          "19"
+        ],
+        [
+          4.09,
+          4.923,
+          "ألفاً."
+        ],
+        [
+          4.923,
+          5.394,
+          "وحتى"
+        ],
+        [
+          5.394,
+          5.774,
+          "هذه"
+        ],
+        [
+          5.774,
+          6.335,
+          "الأرض"
+        ],
+        [
+          6.335,
+          7.349,
+          "الأخيرة،"
+        ],
+        [
+          7.349,
+          8.453,
+          "يريدونها."
+        ]
+      ],
+      "narration_cached": "من 80 ألف دونم، إلى أقل من 19 ألفاً. وحتى هذه الأرض الأخيرة، يريدونها.",
+      "render_duration": 9.103
+    },
+    {
+      "id": "b20",
+      "narration": "لجنة المزارعين في الطيبة تنادي: افتحوا عيونكم. اسألوا، واعترضوا، وشاركوا هذا المنشور مع كل بيت.",
+      "feel": "call to action",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 6.5,
+          "preset": "title",
+          "bg": "cream",
+          "camera": "push_in",
+          "headline": "شارك هذا المنشور",
+          "headline_bar": "red",
+          "sub": "لجنة المزارعين في الطيبة",
+          "stamp": "مهم",
+          "mark": "underline",
+          "_layers": [
+            {
+              "type": "headline",
+              "text": "شارك هذا المنشور",
+              "bar": "red",
+              "fill": "white",
+              "size": 0.062,
+              "x": 0.5,
+              "y": 0.42,
+              "rot": -2,
+              "max_w": 0.9,
+              "in": "slam",
+              "at": 0.5
+            },
+            {
+              "type": "headline",
+              "text": "لجنة المزارعين في الطيبة",
+              "bar": "white",
+              "size": 0.046,
+              "x": 0.5,
+              "y": 0.56,
+              "rot": 2,
+              "max_w": 0.86,
+              "in": "pop",
+              "at": 1.8
+            },
+            {
+              "type": "underline",
+              "x": 0.5,
+              "y": 0.4696,
+              "w": 0.6,
+              "in": "draw",
+              "at": 2.5
+            },
+            {
+              "type": "stamp",
+              "text": "مهم",
+              "x": 0.74,
+              "y": 0.28,
+              "size": 0.05,
+              "rot": 10,
+              "in": "stamp",
+              "at": 3.2
+            }
+          ],
+          "plate_path": "keyframes/plate_b20a.png",
+          "plate_kind": "procedural",
+          "transition_kind": "tear",
+          "transition_dur": 0.45,
+          "render_duration": 9.257,
+          "clip_render": "clips/shot_b20a.mp4",
+          "clip_sig": "59171c9de45e"
+        }
+      ],
+      "audio_path": "audio/narr_b20.wav",
+      "audio_duration": 8.907,
+      "word_timings": [
+        [
+          0.18,
+          0.582,
+          "لجنة"
+        ],
+        [
+          0.582,
+          1.371,
+          "المزارعين"
+        ],
+        [
+          1.371,
+          1.618,
+          "في"
+        ],
+        [
+          1.618,
+          2.175,
+          "الطيبة"
+        ],
+        [
+          2.175,
+          2.886,
+          "تنادي:"
+        ],
+        [
+          2.886,
+          3.443,
+          "افتحوا"
+        ],
+        [
+          3.443,
+          4.231,
+          "عيونكم."
+        ],
+        [
+          4.231,
+          5.02,
+          "اسألوا،"
+        ],
+        [
+          5.02,
+          5.963,
+          "واعترضوا،"
+        ],
+        [
+          5.963,
+          6.597,
+          "وشاركوا"
+        ],
+        [
+          6.597,
+          6.922,
+          "هذا"
+        ],
+        [
+          6.922,
+          7.556,
+          "المنشور"
+        ],
+        [
+          7.556,
+          7.803,
+          "مع"
+        ],
+        [
+          7.803,
+          8.05,
+          "كل"
+        ],
+        [
+          8.05,
+          8.607,
+          "بيت."
+        ]
+      ],
+      "narration_cached": "لجنة المزارعين في الطيبة تنادي: افتحوا عيونكم. اسألوا، واعترضوا، وشاركوا هذا المنشور مع كل بيت.",
+      "render_duration": 9.257
+    },
+    {
+      "id": "b21",
+      "narration": "لأن أرض الطيبة ما بتنسرق، إلا إذا بقينا نايمين. والحبل، يا أهل الطيبة، على الجرار.",
+      "feel": "final warning echo",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 7,
+          "preset": "title",
+          "bg": "black",
+          "camera": "push_in",
+          "headline": "والحبل على الجرار",
+          "headline_bar": "red",
+          "sub": "أرضنا: رباطنا. هويتنا. أمانتنا.",
+          "stamp": "أرضنا",
+          "mark": "circle",
+          "_layers": [
+            {
+              "type": "headline",
+              "text": "والحبل على الجرار",
+              "bar": "red",
+              "fill": "white",
+              "size": 0.048,
+              "x": 0.5,
+              "y": 0.42,
+              "rot": -2,
+              "max_w": 0.9,
+              "in": "slam",
+              "at": 0.5
+            },
+            {
+              "type": "headline",
+              "text": "أرضنا: رباطنا. هويتنا. أمانتنا.",
+              "bar": "white",
+              "size": 0.046,
+              "x": 0.5,
+              "y": 0.56,
+              "rot": 2,
+              "max_w": 0.86,
+              "in": "pop",
+              "at": 1.8
+            },
+            {
+              "type": "circle",
+              "x": 0.5,
+              "y": 0.42,
+              "w": 0.3,
+              "h": 0.1512,
+              "in": "draw",
+              "at": 2.5,
+              "in_dur": 0.6
+            },
+            {
+              "type": "stamp",
+              "text": "أرضنا",
+              "x": 0.74,
+              "y": 0.28,
+              "size": 0.05,
+              "rot": 10,
+              "in": "stamp",
+              "at": 3.2
+            }
+          ],
+          "plate_path": "keyframes/plate_b21a.png",
+          "plate_kind": "procedural",
+          "headline_size": 0.048,
+          "transition_kind": "tear",
+          "transition_dur": 0.45,
+          "render_duration": 8.282,
+          "clip_render": "clips/shot_b21a.mp4",
+          "clip_sig": "0575516691ae"
+        }
+      ],
+      "audio_path": "audio/narr_b21.wav",
+      "audio_duration": 7.932,
+      "word_timings": [
+        [
+          0.18,
+          0.506,
+          "لأن"
+        ],
+        [
+          0.506,
+          0.832,
+          "أرض"
+        ],
+        [
+          0.832,
+          1.391,
+          "الطيبة"
+        ],
+        [
+          1.391,
+          1.639,
+          "ما"
+        ],
+        [
+          1.639,
+          2.431,
+          "بتنسرق،"
+        ],
+        [
+          2.431,
+          2.757,
+          "إلا"
+        ],
+        [
+          2.757,
+          3.083,
+          "إذا"
+        ],
+        [
+          3.083,
+          3.565,
+          "بقينا"
+        ],
+        [
+          3.565,
+          4.356,
+          "نايمين."
+        ],
+        [
+          4.356,
+          5.148,
+          "والحبل،"
+        ],
+        [
+          5.148,
+          5.397,
+          "يا"
+        ],
+        [
+          5.397,
+          5.723,
+          "أهل"
+        ],
+        [
+          5.723,
+          6.514,
+          "الطيبة،"
+        ],
+        [
+          6.514,
+          6.84,
+          "على"
+        ],
+        [
+          6.84,
+          7.632,
+          "الجرار."
+        ]
+      ],
+      "narration_cached": "لأن أرض الطيبة ما بتنسرق، إلا إذا بقينا نايمين. والحبل، يا أهل الطيبة، على الجرار.",
+      "render_duration": 8.282
+    }
+  ]
+}
