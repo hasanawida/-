@@ -99,7 +99,8 @@
           "transition_dur": 0.0,
           "render_duration": 7.352,
           "clip_render": "clips/shot_b01a.mp4",
-          "clip_sig": "698ca0351c2e"
+          "clip_sig": "698ca0351c2e",
+          "plate": "aerial view of a crowded Palestinian town at dusk surrounded by open fields, torn newspaper collage edges, deep red wash, grainy archival"
         }
       ],
       "audio_path": "audio/narr_b01.wav",
@@ -238,7 +239,8 @@
           "transition_dur": 0.45,
           "render_duration": 5.637,
           "clip_render": "clips/shot_b02a.mp4",
-          "clip_sig": "7bfabbb3a406"
+          "clip_sig": "7bfabbb3a406",
+          "plate": "1940s aerial photograph of vast open farmland, wheat fields and olive groves stretching to the horizon, sepia archival, torn paper edges"
         },
         {
           "id": "b",
@@ -271,7 +273,8 @@
           "transition_dur": 0.0,
           "render_duration": 4.099,
           "clip_render": "clips/shot_b02b.mp4",
-          "clip_sig": "c0fb24e3e0d4"
+          "clip_sig": "c0fb24e3e0d4",
+          "plate": "old stone village houses beside a wheat threshing floor, hand-carts and grain sacks, 1940s archival photograph, warm sepia"
         }
       ],
       "audio_path": "audio/narr_b02.wav",
@@ -424,7 +427,8 @@
           "transition_dur": 0.45,
           "render_duration": 6.976,
           "clip_render": "clips/shot_b03a.mp4",
-          "clip_sig": "ba8797e70a5e"
+          "clip_sig": "ba8797e70a5e",
+          "plate": "dusty churned earth at the edge of a farm field, tyre tracks and torn soil, harsh daylight, black and white archival, paper collage texture"
         }
       ],
       "audio_path": "audio/narr_b03.wav",
@@ -583,7 +587,8 @@
           "transition_dur": 0.45,
           "render_duration": 8.667,
           "clip_render": "clips/shot_b04a.mp4",
-          "clip_sig": "6abaab9aaeb0"
+          "clip_sig": "6abaab9aaeb0",
+          "plate": "spread of old land-survey documents and cadastral map fragments overlapping on a desk, official archive, muted cream tones"
         }
       ],
       "audio_path": "audio/narr_b04.wav",
@@ -757,7 +762,8 @@
           "transition_dur": 0.45,
           "render_duration": 6.0,
           "clip_render": "clips/shot_b05a.mp4",
-          "clip_sig": "4691c37e1176"
+          "clip_sig": "4691c37e1176",
+          "plate": "aerial view of farmland sliced apart by fences and boundary lines, deep red wash over grainy archival photograph"
         }
       ],
       "audio_path": "audio/narr_b05.wav",
@@ -860,7 +866,8 @@
           "transition_dur": 0.45,
           "render_duration": 5.797,
           "clip_render": "clips/shot_b06a.mp4",
-          "clip_sig": "8edba05f9c5a"
+          "clip_sig": "8edba05f9c5a",
+          "plate": "night aerial view of dark fields cut by lit roads, high contrast black and white, ominous, newsprint halftone"
         }
       ],
       "audio_path": "audio/narr_b06.wav",
@@ -989,7 +996,8 @@
           "transition_dur": 0.45,
           "render_duration": 6.546,
           "clip_render": "clips/shot_b07a.mp4",
-          "clip_sig": "9bc8c53852dc"
+          "clip_sig": "9bc8c53852dc",
+          "plate": "tight aerial view of a dense town hemmed in on all sides by boundary lines and open land, archival photograph, cream paper collage"
         },
         {
           "id": "b",
@@ -1041,7 +1049,8 @@
           "transition_dur": 0.0,
           "render_duration": 6.001,
           "clip_render": "clips/shot_b07b.mp4",
-          "clip_sig": "ef84b6ec6d9a"
+          "clip_sig": "ef84b6ec6d9a",
+          "plate": "dark architectural master plan blueprint with zoning outlines, faded, low light, moody"
         }
       ],
       "audio_path": "audio/narr_b07.wav",
@@ -1200,7 +1209,8 @@
           "transition_dur": 0.45,
           "render_duration": 7.757,
           "clip_render": "clips/shot_b08a.mp4",
-          "clip_sig": "089648d21235"
+          "clip_sig": "089648d21235",
+          "plate": "urban zoning master plan drawing with coloured land parcels, flat top-down, muted paper tones"
         }
       ],
       "audio_path": "audio/narr_b08.wav",
@@ -1390,7 +1400,8 @@
           "transition_dur": 0.45,
           "render_duration": 9.042,
           "clip_render": "clips/shot_b09a.mp4",
-          "clip_sig": "3bde6bc7a232"
+          "clip_sig": "3bde6bc7a232",
+          "plate": "high voltage electricity pylons marching across farmland with a railway line cutting through fields, black and white archival, wide view"
         }
       ],
       "audio_path": "audio/narr_b09.wav",
@@ -1532,7 +1543,8 @@
           "transition_dur": 0.45,
           "render_duration": 5.598,
           "clip_render": "clips/shot_b10a.mp4",
-          "clip_sig": "af7dd8cc77a2"
+          "clip_sig": "af7dd8cc77a2",
+          "plate": "heavy storm clouds gathering over open farmland at dusk, very dark, dramatic, grainy black and white"
         }
       ],
       "audio_path": "audio/narr_b10.wav",
@@ -1672,7 +1684,8 @@
           "transition_dur": 0.45,
           "render_duration": 8.818,
           "clip_render": "clips/shot_b11a.mp4",
-          "clip_sig": "a9c51a10cd2c"
+          "clip_sig": "a9c51a10cd2c",
+          "plate": "sprawling landfill site with mounds of waste and circling birds, dust haze, black and white archival photograph"
         }
       ],
       "audio_path": "audio/narr_b11.wav",
@@ -1807,7 +1820,8 @@
           "transition_dur": 0.45,
           "render_duration": 7.026,
           "clip_render": "clips/shot_b12a.mp4",
-          "clip_sig": "fb470c3927a8"
+          "clip_sig": "fb470c3927a8",
+          "plate": "aerial view of a large excavated pit carved into green farmland, raw earth, mustard yellow wash, grainy"
         }
       ],
       "audio_path": "audio/narr_b12.wav",
@@ -1944,7 +1958,8 @@
           "transition_dur": 0.45,
           "render_duration": 7.389,
           "clip_render": "clips/shot_b13a.mp4",
-          "clip_sig": "6bf7c0b269e0"
+          "clip_sig": "6bf7c0b269e0",
+          "plate": "aerial view of a wide highway interchange cutting straight through farmland, black and white archival, high contrast"
         },
         {
           "id": "b",
@@ -2000,7 +2015,8 @@
           "transition_dur": 0.0,
           "render_duration": 5.806,
           "clip_render": "clips/shot_b13b.mp4",
-          "clip_sig": "8791d997e9b3"
+          "clip_sig": "8791d997e9b3",
+          "plate": "new asphalt road under construction slicing through open fields, roadworks and gravel, warm yellow wash, archival grain"
         }
       ],
       "audio_path": "audio/narr_b13.wav",
@@ -2134,7 +2150,8 @@
           "transition_dur": 0.45,
           "render_duration": 6.321,
           "clip_render": "clips/shot_b14a.mp4",
-          "clip_sig": "8a9ec5980a1c"
+          "clip_sig": "8a9ec5980a1c",
+          "plate": "aerial farmland marked with survey stakes and dashed boundary lines, deep red wash, grainy archival"
         },
         {
           "id": "b",
@@ -2198,7 +2215,8 @@
           "transition_dur": 0.45,
           "render_duration": 5.267,
           "clip_render": "clips/shot_b14b.mp4",
-          "clip_sig": "06e165400e45"
+          "clip_sig": "06e165400e45",
+          "plate": "flat land-survey plan with parcel outlines and measurement marks, muted white paper"
         }
       ],
       "audio_path": "audio/narr_b14.wav",
@@ -2313,7 +2331,8 @@
           "transition_dur": 0.45,
           "render_duration": 7.847,
           "clip_render": "clips/shot_b15a.mp4",
-          "clip_sig": "5ac8e1a2dbf2"
+          "clip_sig": "5ac8e1a2dbf2",
+          "plate": "dark polluted sky over an industrial horizon, heavy smoke, very dark, high contrast black and white"
         }
       ],
       "audio_path": "audio/narr_b15.wav",
@@ -2492,7 +2511,8 @@
           "transition_dur": 0.45,
           "render_duration": 7.855,
           "clip_render": "clips/shot_b16a.mp4",
-          "clip_sig": "9d162163ea89"
+          "clip_sig": "9d162163ea89",
+          "plate": "cracked dry earth in the foreground with hazy smog and distant buildings, bleak, black and white archival"
         }
       ],
       "audio_path": "audio/narr_b16.wav",
@@ -2615,7 +2635,8 @@
           "transition_dur": 0.45,
           "render_duration": 7.188,
           "clip_render": "clips/shot_b17a.mp4",
-          "clip_sig": "18bb540973e3"
+          "clip_sig": "18bb540973e3",
+          "plate": "long line of heavy trucks queued along a road seen from above, dust haze, black and white archival photograph"
         }
       ],
       "audio_path": "audio/narr_b17.wav",
@@ -2766,7 +2787,8 @@
           "transition_dur": 0.45,
           "render_duration": 9.653,
           "clip_render": "clips/shot_b18a.mp4",
-          "clip_sig": "8e371ae4745a"
+          "clip_sig": "8e371ae4745a",
+          "plate": "old olive grove with thick gnarled trunks and dappled light, warm archival photograph, gentle and dignified"
         }
       ],
       "audio_path": "audio/narr_b18.wav",
@@ -2911,7 +2933,8 @@
               "in": "stamp",
               "at": 3.2
             }
-          ]
+          ],
+          "plate": "aerial view of farmland with visible shrinking boundary outlines, faded archival photograph, cream paper texture"
         }
       ],
       "audio_path": "audio/narr_b19.wav",
@@ -3058,7 +3081,8 @@
           "transition_dur": 0.45,
           "render_duration": 9.257,
           "clip_render": "clips/shot_b20a.mp4",
-          "clip_sig": "59171c9de45e"
+          "clip_sig": "59171c9de45e",
+          "plate": "villagers gathered together outdoors in a town square, seen from behind, 1970s archival photograph, warm cream tones"
         }
       ],
       "audio_path": "audio/narr_b20.wav",
@@ -3213,7 +3237,8 @@
           "transition_dur": 0.45,
           "render_duration": 8.282,
           "clip_render": "clips/shot_b21a.mp4",
-          "clip_sig": "0575516691ae"
+          "clip_sig": "0575516691ae",
+          "plate": "silhouette of a single old olive tree against a dark dusk sky, very dark, dramatic, grainy"
         }
       ],
       "audio_path": "audio/narr_b21.wav",

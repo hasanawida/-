@@ -10,3 +10,20 @@
 
 لإعادة الرندر بدقة 1080×1920: شغّل أداة vox-ar على `beats.json`
 (`python run.py out/ardna`) مع صوت الراوي piper `ar_JO-kareem-medium`.
+
+## التبديل إلى Gemini / ElevenLabs
+
+`engine.py` يبدّل المشروع بين المحركات (انسخه إلى `vox-ar/scripts/`):
+
+```bash
+export GEMINI_API_KEY=...        # مجاني: https://aistudio.google.com/apikey
+export ELEVENLABS_API_KEY=...    # مجاني 10k حرف/شهر
+
+# لوحات ذكية بجميني + راوٍ ElevenLabs بتوقيت كلمات حقيقي
+python3 scripts/engine.py out/ardna --images gemini --tts eleven --voice <voice_id>
+python3 run.py out/ardna --gate     # بوابة الشكل
+python3 run.py out/ardna            # الرندر النهائي
+```
+
+كل لقطة في `beats.json` تحمل حقل `plate` (وصف إنجليزي بلا نص) جاهزاً للتوليد بجميني.
+للرجوع للوضع المجاني: `--images procedural --tts piper`.
