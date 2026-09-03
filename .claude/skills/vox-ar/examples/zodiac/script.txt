@@ -1,0 +1,22 @@
+# project: zodiac | aspect: 16:9 | theme: dark-investigative | persona: documentary_male | mood: tense | plates: procedural
+---
+[hero_right | bg=black | cutout=1960s police patrol car at night, side view | effects=bw,old | headline=4 ديسمبر 1966 | headline_bar=red | sub=فاليخو، كاليفورنيا | stamp=ملف سري | mark=circle | sfx=police siren]
+الرابع من ديسمبر 1966. مدينة فاليخو، كاليفورنيا. شرطي دورية يمر بجانب سيارة متوقفة قرب مدرسة مغلقة.
+---
+[hero_left | bg=black | cutout=1960s abandoned car near a school at night | effects=bw | headline=قتل بلا سبب واضح | sub=فتاة وشاب بالرصاص | mark=arrow | transition=slide]
+بداخلها فتاة وشاب قُتلا بالرصاص دون سبب واضح.
+---
+[timeline | bg=cream | headline=الجريمة تتكرر | items=ديسمبر 1966, يوليو 1967, سبتمبر 1969 | stamp=نمط]
+بعد سبعة أشهر، جريمة مشابهة تتكرر عند بحيرة هيرمان. هذه المرة تنجو الفتاة، وتصف رجلاً يرتدي قناعاً أسود.
+---
+[callouts | bg=cream | cutout=handwritten cipher letter with a circle-and-cross symbol | effects=old | headline=رسائل مشفّرة | callouts=رمز الدائرة والصليب@0.2,0.3>0.62,0.4; تهديد بالقتل@0.2,0.5>0.6,0.62 | sfx=typewriter]
+ثم يبدأ القاتل بكتابة رسائل مشفّرة يرسلها إلى الصحف المحلية، موقّعة برمز دائرة وصليب، ويهدد بمزيد من القتل إن لم تُنشر.
+---
+[stats | bg=cream | headline=الشفرات الأربع | items=الأولى:1, الثانية:1, الثالثة:1, الرابعة:0 | stamp=لغز]
+الصحف تنشر ثلاثاً من أصل أربع شفرات. تُحلّ لاحقاً، لكن الرابعة تظل لغزاً لعقود.
+---
+[number | bg=red | value=50 | suffix= سنة | headline_bar=white | sub=تحقيقات FBI بلا اعتراف | badge=؟]
+يوقّع رسائله باسم واحد: زودياك. تحقيقات مكتب التحقيقات الفيدرالي تمتد لأكثر من 50 عاماً، ومشتبه به رئيسي يموت دون اعتراف.
+---
+[quote | bg=black | headline=«رمز الدائرة والصليب لم يُفسَّر بعد» | headline_bar=white | stamp=حتى اليوم | transition=flip]
+حتى اليوم، يحمل الملف الرسمي توقيعاً واحداً: رمز الدائرة والصليب، الذي لم يُفسَّر بعد.

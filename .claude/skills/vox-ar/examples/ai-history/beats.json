@@ -1,0 +1,1782 @@
+{
+  "project": "ai-history",
+  "topic": "قصة الذكاء الاصطناعي — فيلم وثائقي 3 دقائق",
+  "language": "ar",
+  "aspect": "16:9",
+  "fps": 30,
+  "theme": "arabic-newsprint",
+  "provider": "placeholder",
+  "plates": "procedural",
+  "tts": {
+    "engine": "placeholder",
+    "persona": "documentary_male"
+  },
+  "music": {
+    "path": "auto",
+    "mood": "investigative",
+    "gain_db": -18
+  },
+  "parallax": 1.0,
+  "fx": [
+    "dust",
+    "sweep"
+  ],
+  "captions": {
+    "enabled": true,
+    "style": "highlight",
+    "bar": "white",
+    "fill": "black",
+    "size": 0.05,
+    "position": 0.86,
+    "max_words": 5
+  },
+  "watermark": "",
+  "beats": [
+    {
+      "id": 1,
+      "feel": "urgent, investigative, dramatic",
+      "narration": "في سنة 1950، واحد من أذكى الناس بالعالم سأل سؤال بسيط: هل الآلة بتقدر تفكّر؟ بعد 75 سنة، الجواب صار بجيبتك.",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 5.65,
+          "camera": "push_in",
+          "plate": "a cut-out black-and-white archival photo of a huge 1950s room-sized computer with vacuum tubes and reels, a paper question mark, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "vintage 1950s room-sized mainframe computer with tape reels, front view",
+              "effects": [
+                "bw"
+              ],
+              "x": 0.64,
+              "y": 0.5,
+              "w": 0.36,
+              "rot": -3,
+              "at": 0.1
+            },
+            {
+              "type": "headline",
+              "text": "خبر عاجل",
+              "bar": "red",
+              "size": 0.09,
+              "x": 0.22,
+              "y": 0.16,
+              "rot": -2,
+              "at": 0.5,
+              "max_w": 0.5,
+              "fill": "white"
+            },
+            {
+              "type": "headline",
+              "text": "هل الآلة بتقدر تفكّر؟",
+              "bar": "yellow",
+              "size": 0.07,
+              "x": 0.24,
+              "y": 0.4,
+              "rot": -2,
+              "at": 1.6,
+              "max_w": 0.42
+            },
+            {
+              "type": "circle",
+              "x": 0.64,
+              "y": 0.5,
+              "w": 0.3,
+              "h": 0.42,
+              "at": 3.2,
+              "in_dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "dur": 5.08,
+          "camera": "pull_out",
+          "plate": "a cut-out photo of a modern smartphone in a hand glowing, surrounded by torn paper scraps and a big red arrow, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "smartphone held in a hand, screen glowing, close-up",
+              "effects": [],
+              "x": 0.3,
+              "y": 0.52,
+              "w": 0.22,
+              "rot": -3,
+              "at": 0.1
+            },
+            {
+              "type": "headline",
+              "text": "الجواب صار بجيبتك",
+              "bar": "red",
+              "size": 0.08,
+              "x": 0.66,
+              "y": 0.38,
+              "rot": -2,
+              "at": 0.8,
+              "max_w": 0.45,
+              "fill": "white"
+            },
+            {
+              "type": "stamp",
+              "text": "2025",
+              "x": 0.72,
+              "y": 0.62,
+              "size": 0.07,
+              "rot": 8,
+              "at": 1.8
+            },
+            {
+              "type": "arrow",
+              "x0": 0.55,
+              "y0": 0.5,
+              "x1": 0.4,
+              "y1": 0.5,
+              "at": 2.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "feel": "historical, mysterious",
+      "narration": "اسمه آلان تورينغ. عالم رياضيات بريطاني فكّ شيفرة النازيين بالحرب. وبورقة من 1950 اقترح اختبار: إذا حكيت مع آلة وما عرفت إنها آلة، فهي بتفكّر.",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 6.21,
+          "camera": "push_in",
+          "plate": "a pinned black-and-white archival portrait card of a 1940s British mathematician in a suit, an old typewritten letter, a paper file folder marked with a red seal, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "1940s British mathematician in a tweed suit, portrait, chest up",
+              "effects": [
+                "bw",
+                "old"
+              ],
+              "x": 0.3,
+              "y": 0.5,
+              "w": 0.24,
+              "rot": -3,
+              "at": 0.1
+            },
+            {
+              "type": "pin",
+              "x": 0.3,
+              "y": 0.2,
+              "at": 0.4
+            },
+            {
+              "type": "headline",
+              "text": "آلان تورينغ",
+              "bar": "yellow",
+              "size": 0.085,
+              "x": 0.66,
+              "y": 0.3,
+              "rot": -2,
+              "at": 0.6,
+              "max_w": 0.5
+            },
+            {
+              "type": "headline",
+              "text": "فكّ شيفرة النازيين",
+              "bar": "white",
+              "size": 0.06,
+              "x": 0.66,
+              "y": 0.5,
+              "rot": -2,
+              "at": 2.2,
+              "max_w": 0.4
+            },
+            {
+              "type": "stamp",
+              "text": "ملف سري",
+              "x": 0.7,
+              "y": 0.68,
+              "size": 0.06,
+              "rot": -10,
+              "at": 3.4
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "dur": 6.78,
+          "camera": "pan_r",
+          "plate": "a torn typewritten scientific paper cut-out beside a paper speech bubble and a cut-out old telephone, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "typewritten 1950 scientific paper with a title block, slightly yellowed",
+              "effects": [
+                "old"
+              ],
+              "x": 0.32,
+              "y": 0.5,
+              "w": 0.26,
+              "rot": 3,
+              "at": 0.1
+            },
+            {
+              "type": "stamp",
+              "text": "1950",
+              "x": 0.42,
+              "y": 0.24,
+              "size": 0.06,
+              "rot": 12,
+              "at": 0.6
+            },
+            {
+              "type": "headline",
+              "text": "اختبار تورينغ",
+              "bar": "red",
+              "size": 0.08,
+              "x": 0.68,
+              "y": 0.3,
+              "rot": -2,
+              "at": 1.0,
+              "max_w": 0.5,
+              "fill": "white"
+            },
+            {
+              "type": "headline",
+              "text": "إذا ما عرفت إنها آلة… فهي بتفكّر",
+              "bar": "yellow",
+              "size": 0.055,
+              "x": 0.68,
+              "y": 0.55,
+              "rot": -2,
+              "at": 2.8,
+              "max_w": 0.42
+            },
+            {
+              "type": "underline",
+              "x": 0.68,
+              "y": 0.62,
+              "w": 0.25,
+              "at": 4.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "feel": "optimistic, 1950s energy",
+      "narration": "سنة 1956، بجامعة دارتموث، اجتمع كم عالم بصيفية واحدة وقرروا يعطوا الحلم اسم: الذكاء الاصطناعي. وقالوا رح نحلّه بكم شهر.",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 6.21,
+          "camera": "push_in",
+          "plate": "a group black-and-white 1950s photo of scientists standing in front of a college building, cut out and taped, a paper calendar page, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "group of 1950s scientists in suits standing in front of a college building, wide shot",
+              "effects": [
+                "bw"
+              ],
+              "x": 0.6,
+              "y": 0.52,
+              "w": 0.42,
+              "rot": -2,
+              "at": 0.1
+            },
+            {
+              "type": "tape",
+              "x": 0.45,
+              "y": 0.28,
+              "w": 0.12,
+              "rot": -7,
+              "at": 0.4
+            },
+            {
+              "type": "tape",
+              "x": 0.78,
+              "y": 0.3,
+              "w": 0.12,
+              "rot": 9,
+              "at": 0.5
+            },
+            {
+              "type": "headline",
+              "text": "1956 — دارتموث",
+              "bar": "yellow",
+              "size": 0.07,
+              "x": 0.2,
+              "y": 0.2,
+              "rot": -2,
+              "at": 0.7,
+              "max_w": 0.5
+            },
+            {
+              "type": "headline",
+              "text": "الذكاء الاصطناعي",
+              "bar": "red",
+              "size": 0.08,
+              "x": 0.2,
+              "y": 0.5,
+              "rot": -2,
+              "at": 2.3,
+              "max_w": 0.3,
+              "fill": "white"
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "dur": 5.08,
+          "camera": "static",
+          "plate": "a paper cut-out of a 1950s calendar page with a red pen, a coffee stain, a paper sun and a paper clock, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "vintage paper wall calendar showing summer months, front view",
+              "effects": [
+                "old"
+              ],
+              "x": 0.34,
+              "y": 0.5,
+              "w": 0.24,
+              "rot": -3,
+              "at": 0.1
+            },
+            {
+              "type": "headline",
+              "text": "«رح نحلّه بكم شهر»",
+              "bar": "white",
+              "size": 0.065,
+              "x": 0.68,
+              "y": 0.4,
+              "rot": -2,
+              "at": 0.6,
+              "max_w": 0.42
+            },
+            {
+              "type": "stamp",
+              "text": "تفاؤل زايد",
+              "x": 0.7,
+              "y": 0.62,
+              "size": 0.06,
+              "rot": -8,
+              "at": 2.0
+            },
+            {
+              "type": "circle",
+              "x": 0.34,
+              "y": 0.5,
+              "w": 0.2,
+              "h": 0.4,
+              "at": 2.8,
+              "in_dur": 0.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "feel": "ironic, then cold and gloomy",
+      "narration": "بالستينات ظهر أول شات بوت اسمه إليزا. الناس صدّقوا إنه بيفهمهم، وهو بس بيعيد كلامهم كأسئلة. وبعدها الوعود ما تحققت، فالتمويل انقطع. سمّوها: شتاء الذكاء الاصطناعي.",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 5.65,
+          "camera": "push_in",
+          "plate": "a cut-out 1960s teletype terminal printing a paper strip, a paper speech bubble, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "1960s teletype computer terminal with paper printout, three-quarter view",
+              "effects": [
+                "bw"
+              ],
+              "x": 0.62,
+              "y": 0.52,
+              "w": 0.34,
+              "rot": -3,
+              "at": 0.1
+            },
+            {
+              "type": "headline",
+              "text": "إليزا — أول شات بوت",
+              "bar": "yellow",
+              "size": 0.07,
+              "x": 0.24,
+              "y": 0.22,
+              "rot": -2,
+              "at": 0.6,
+              "max_w": 0.4
+            },
+            {
+              "type": "headline",
+              "text": "بس بتعيد كلامك كسؤال",
+              "bar": "white",
+              "size": 0.055,
+              "x": 0.24,
+              "y": 0.5,
+              "rot": -2,
+              "at": 2.3,
+              "max_w": 0.36
+            },
+            {
+              "type": "stamp",
+              "text": "وهم",
+              "x": 0.7,
+              "y": 0.24,
+              "size": 0.07,
+              "rot": 10,
+              "at": 3.6
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "dur": 6.21,
+          "camera": "pull_out",
+          "plate": "a big torn dark grey-blue paper background with snowflake paper cut-outs, a cut-out empty wallet and a closed door, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "closed office door with a paper sign, front view",
+              "effects": [
+                "bw"
+              ],
+              "x": 0.3,
+              "y": 0.52,
+              "w": 0.2,
+              "rot": -3,
+              "at": 0.1
+            },
+            {
+              "type": "headline",
+              "text": "شتاء الذكاء الاصطناعي",
+              "bar": "black",
+              "size": 0.08,
+              "x": 0.66,
+              "y": 0.35,
+              "rot": -2,
+              "at": 0.6,
+              "max_w": 0.45,
+              "fill": "white"
+            },
+            {
+              "type": "headline",
+              "text": "التمويل انقطع",
+              "bar": "red",
+              "size": 0.06,
+              "x": 0.66,
+              "y": 0.58,
+              "rot": -2,
+              "at": 2.2,
+              "max_w": 0.5,
+              "fill": "white"
+            },
+            {
+              "type": "stamp",
+              "text": "1974",
+              "x": 0.28,
+              "y": 0.24,
+              "size": 0.06,
+              "rot": -12,
+              "at": 3.4
+            }
+          ],
+          "bg": "cold slate grey-blue paper"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "feel": "corporate 1980s, then collapse",
+      "narration": "بالثمانينات رجع الأمل بشكل تاني: الأنظمة الخبيرة. برامج فيها آلاف القواعد كتبها بشر بإيدهم: إذا صار هيك، اعمل هيك. الشركات صرفت مليارات. بس القواعد ما بتغطي الحياة الحقيقية، وانهار كل شي مرة تانية سنة 1987.",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 6.78,
+          "camera": "push_in",
+          "plate": "a cut-out photo of a 1980s office with beige computers and a man in a suit, a paper flowchart with many boxes, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "1980s beige desktop computer with a bulky monitor on an office desk, front view",
+              "effects": [
+                "bw"
+              ],
+              "x": 0.62,
+              "y": 0.52,
+              "w": 0.34,
+              "rot": -3,
+              "at": 0.1
+            },
+            {
+              "type": "headline",
+              "text": "الثمانينات — الأنظمة الخبيرة",
+              "bar": "yellow",
+              "size": 0.06,
+              "x": 0.22,
+              "y": 0.2,
+              "rot": -2,
+              "at": 0.6,
+              "max_w": 0.36
+            },
+            {
+              "type": "headline",
+              "text": "إذا صار هيك… اعمل هيك",
+              "bar": "white",
+              "size": 0.05,
+              "x": 0.22,
+              "y": 0.5,
+              "rot": -2,
+              "at": 2.6,
+              "max_w": 0.34
+            },
+            {
+              "type": "stamp",
+              "text": "آلاف القواعد",
+              "x": 0.72,
+              "y": 0.22,
+              "size": 0.055,
+              "rot": 10,
+              "at": 4.0
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "dur": 6.78,
+          "camera": "pull_out",
+          "plate": "a torn stock-market chart cut-out falling sharply, a paper snowflake, a crumpled dollar bill cut-out, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "line chart on paper falling sharply downward, front view",
+              "effects": [
+                "old"
+              ],
+              "x": 0.34,
+              "y": 0.5,
+              "w": 0.28,
+              "rot": -2,
+              "at": 0.1
+            },
+            {
+              "type": "headline",
+              "text": "مليارات",
+              "bar": "red",
+              "size": 0.085,
+              "x": 0.7,
+              "y": 0.3,
+              "rot": -2,
+              "at": 0.6,
+              "max_w": 0.5,
+              "fill": "white"
+            },
+            {
+              "type": "headline",
+              "text": "الشتاء التاني",
+              "bar": "black",
+              "size": 0.075,
+              "x": 0.7,
+              "y": 0.55,
+              "rot": -2,
+              "at": 2.4,
+              "max_w": 0.5,
+              "fill": "white"
+            },
+            {
+              "type": "stamp",
+              "text": "1987",
+              "x": 0.36,
+              "y": 0.24,
+              "size": 0.06,
+              "rot": -12,
+              "at": 3.6
+            },
+            {
+              "type": "arrow",
+              "x0": 0.55,
+              "y0": 0.62,
+              "x1": 0.42,
+              "y1": 0.66,
+              "at": 4.6
+            }
+          ],
+          "bg": "cold slate grey-blue paper"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "feel": "tense, sports-drama",
+      "narration": "سنة 1997 صار شي هزّ العالم. كمبيوتر من IBM اسمه ديب بلو غلب بطل العالم بالشطرنج غاري كاسباروف. لأول مرة، آلة بتغلب أفضل عقل بشري بلعبته.",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 5.65,
+          "camera": "push_in",
+          "plate": "a black-and-white press photo of a chess grandmaster at a chessboard looking worried, a cut-out chess king piece, newspaper headline strips, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "chess grandmaster sitting at a chessboard with his head in his hand, side view",
+              "effects": [
+                "bw"
+              ],
+              "x": 0.34,
+              "y": 0.52,
+              "w": 0.3,
+              "rot": -3,
+              "at": 0.1
+            },
+            {
+              "type": "headline",
+              "text": "1997",
+              "bar": "red",
+              "size": 0.09,
+              "x": 0.7,
+              "y": 0.2,
+              "rot": -2,
+              "at": 0.5,
+              "max_w": 0.5,
+              "fill": "white"
+            },
+            {
+              "type": "headline",
+              "text": "ديب بلو ضد كاسباروف",
+              "bar": "yellow",
+              "size": 0.065,
+              "x": 0.7,
+              "y": 0.45,
+              "rot": -2,
+              "at": 1.5,
+              "max_w": 0.4
+            },
+            {
+              "type": "circle",
+              "x": 0.34,
+              "y": 0.5,
+              "w": 0.26,
+              "h": 0.5,
+              "at": 3.4,
+              "in_dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "dur": 5.65,
+          "camera": "pan_l",
+          "plate": "a cut-out photo of a tall black computer server cabinet next to a chess king lying on its side, confetti paper bits, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "tall black 1990s supercomputer cabinet, front view",
+              "effects": [
+                "bw"
+              ],
+              "x": 0.3,
+              "y": 0.5,
+              "w": 0.16,
+              "rot": -3,
+              "at": 0.1
+            },
+            {
+              "type": "cutout",
+              "subject": "chess king piece lying on its side",
+              "effects": [
+                "bw"
+              ],
+              "x": 0.55,
+              "y": 0.62,
+              "w": 0.12,
+              "rot": 12,
+              "at": 0.8
+            },
+            {
+              "type": "headline",
+              "text": "الآلة غلبت أفضل عقل بشري",
+              "bar": "yellow",
+              "size": 0.06,
+              "x": 0.72,
+              "y": 0.35,
+              "rot": -2,
+              "at": 1.4,
+              "max_w": 0.36
+            },
+            {
+              "type": "stamp",
+              "text": "كش ملك",
+              "x": 0.72,
+              "y": 0.62,
+              "size": 0.07,
+              "rot": -10,
+              "at": 2.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "feel": "TV-show excitement",
+      "narration": "وسنة 2011 كمبيوتر تاني من IBM اسمه واتسون شارك ببرنامج مسابقات على التلفزيون، وغلب أقوى متسابقين بالتاريخ. المرة هاي مش أرقام وشطرنج، هاي لغة بشر، بنكات وألغاز.",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 6.21,
+          "camera": "push_in",
+          "plate": "a black-and-white photo cut-out of a TV quiz-show stage with two contestants at podiums and a big screen between them, paper spotlights, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "television quiz show stage with two contestants standing at podiums, wide shot",
+              "effects": [
+                "bw"
+              ],
+              "x": 0.6,
+              "y": 0.52,
+              "w": 0.42,
+              "rot": 0,
+              "at": 0.1
+            },
+            {
+              "type": "headline",
+              "text": "2011 — واتسون",
+              "bar": "yellow",
+              "size": 0.07,
+              "x": 0.22,
+              "y": 0.2,
+              "rot": -2,
+              "at": 0.6,
+              "max_w": 0.34
+            },
+            {
+              "type": "headline",
+              "text": "على التلفزيون",
+              "bar": "white",
+              "size": 0.055,
+              "x": 0.22,
+              "y": 0.5,
+              "rot": -2,
+              "at": 2.0,
+              "max_w": 0.5
+            },
+            {
+              "type": "circle",
+              "x": 0.6,
+              "y": 0.45,
+              "w": 0.14,
+              "h": 0.3,
+              "at": 3.4,
+              "in_dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "dur": 5.65,
+          "camera": "static",
+          "plate": "a paper speech bubble cut-out with squiggly lines, a cut-out old TV set, a paper question mark and torn dictionary pages, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "vintage television set with antenna, front view",
+              "effects": [
+                "bw"
+              ],
+              "x": 0.32,
+              "y": 0.52,
+              "w": 0.22,
+              "rot": -3,
+              "at": 0.1
+            },
+            {
+              "type": "headline",
+              "text": "مش أرقام… لغة بشر",
+              "bar": "yellow",
+              "size": 0.065,
+              "x": 0.7,
+              "y": 0.35,
+              "rot": -2,
+              "at": 0.8,
+              "max_w": 0.42
+            },
+            {
+              "type": "headline",
+              "text": "نكات وألغاز",
+              "bar": "red",
+              "size": 0.065,
+              "x": 0.7,
+              "y": 0.58,
+              "rot": -2,
+              "at": 2.4,
+              "max_w": 0.5,
+              "fill": "white"
+            },
+            {
+              "type": "stamp",
+              "text": "فاز",
+              "x": 0.34,
+              "y": 0.24,
+              "size": 0.07,
+              "rot": 12,
+              "at": 3.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "feel": "building momentum, technical",
+      "narration": "بس التحوّل الحقيقي ما كان بالشطرنج. كان بشيئين: إنترنت مليان صور وبيانات، وكروت رسومات الألعاب. سنة 2012 شبكة عصبية اسمها أليكس نت تعلّمت تشوف، وغلبت كل المنافسين بفرق كبير.",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 6.21,
+          "camera": "push_in",
+          "plate": "a collage of hundreds of tiny cut-out photographs scattered like a pile, a paper magnifying glass, a cut-out graphics card, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "pile of scattered small printed photographs, top view",
+              "effects": [
+                "bw"
+              ],
+              "x": 0.6,
+              "y": 0.5,
+              "w": 0.42,
+              "rot": 0,
+              "at": 0.1
+            },
+            {
+              "type": "headline",
+              "text": "ملايين الصور",
+              "bar": "yellow",
+              "size": 0.07,
+              "x": 0.22,
+              "y": 0.2,
+              "rot": -2,
+              "at": 0.6,
+              "max_w": 0.5
+            },
+            {
+              "type": "cutout",
+              "subject": "computer graphics card with fans, front view",
+              "effects": [],
+              "x": 0.22,
+              "y": 0.6,
+              "w": 0.2,
+              "rot": -6,
+              "at": 1.8
+            },
+            {
+              "type": "headline",
+              "text": "+ كروت الألعاب",
+              "bar": "white",
+              "size": 0.05,
+              "x": 0.22,
+              "y": 0.82,
+              "rot": -2,
+              "at": 2.6,
+              "max_w": 0.3
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "dur": 5.65,
+          "camera": "static",
+          "plate": "a stapled research paper cut-out with a simple bar chart showing one very tall bar, a cut-out paper eye, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "stapled research paper with a bar chart where one bar is much taller",
+              "effects": [
+                "old"
+              ],
+              "x": 0.32,
+              "y": 0.5,
+              "w": 0.26,
+              "rot": 3,
+              "at": 0.1
+            },
+            {
+              "type": "stamp",
+              "text": "2012",
+              "x": 0.42,
+              "y": 0.22,
+              "size": 0.06,
+              "rot": 12,
+              "at": 0.6
+            },
+            {
+              "type": "headline",
+              "text": "الآلة تعلّمت تشوف",
+              "bar": "red",
+              "size": 0.075,
+              "x": 0.7,
+              "y": 0.35,
+              "rot": -2,
+              "at": 1.2,
+              "max_w": 0.42,
+              "fill": "white"
+            },
+            {
+              "type": "headline",
+              "text": "أليكس نت",
+              "bar": "yellow",
+              "size": 0.06,
+              "x": 0.7,
+              "y": 0.58,
+              "rot": -2,
+              "at": 2.6,
+              "max_w": 0.5
+            },
+            {
+              "type": "arrow",
+              "x0": 0.6,
+              "y0": 0.6,
+              "x1": 0.45,
+              "y1": 0.45,
+              "at": 3.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "feel": "awe, cinematic",
+      "narration": "سنة 2016 وصلنا للعبة كانوا يقولوا مستحيلة على الآلة: غو. احتمالاتها أكتر من ذرات الكون. ألفا غو غلب البطل لي سيدول أربعة لواحد. وبنقلة واحدة، النقلة 37، عملت حركة ما خطرت على بال أي إنسان.",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 6.21,
+          "camera": "push_in",
+          "plate": "a black-and-white press photo of a Go board with black and white stones, a cut-out hand placing a stone, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "Go board with black and white stones, overhead view",
+              "effects": [
+                "bw"
+              ],
+              "x": 0.62,
+              "y": 0.52,
+              "w": 0.34,
+              "rot": -2,
+              "at": 0.1
+            },
+            {
+              "type": "headline",
+              "text": "2016 — لعبة غو",
+              "bar": "yellow",
+              "size": 0.075,
+              "x": 0.22,
+              "y": 0.2,
+              "rot": -2,
+              "at": 0.6,
+              "max_w": 0.5
+            },
+            {
+              "type": "headline",
+              "text": "احتمالات أكتر من ذرات الكون",
+              "bar": "white",
+              "size": 0.05,
+              "x": 0.22,
+              "y": 0.5,
+              "rot": -2,
+              "at": 2.2,
+              "max_w": 0.34
+            },
+            {
+              "type": "stamp",
+              "text": "مستحيل؟",
+              "x": 0.7,
+              "y": 0.22,
+              "size": 0.065,
+              "rot": 10,
+              "at": 3.6
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "dur": 6.21,
+          "camera": "pull_out",
+          "plate": "a paper collage of a scoreboard-like torn strip, a black-and-white photo of a Go player looking stunned, a single paper stone with a red circle, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "professional Go player looking stunned with his hand over his mouth, chest up",
+              "effects": [
+                "bw"
+              ],
+              "x": 0.3,
+              "y": 0.52,
+              "w": 0.24,
+              "rot": -3,
+              "at": 0.1
+            },
+            {
+              "type": "headline",
+              "text": "4 – 1",
+              "bar": "red",
+              "size": 0.1,
+              "x": 0.68,
+              "y": 0.25,
+              "rot": -2,
+              "at": 0.6,
+              "max_w": 0.5,
+              "fill": "white"
+            },
+            {
+              "type": "headline",
+              "text": "النقلة 37",
+              "bar": "yellow",
+              "size": 0.075,
+              "x": 0.68,
+              "y": 0.5,
+              "rot": -2,
+              "at": 2.4,
+              "max_w": 0.5
+            },
+            {
+              "type": "circle",
+              "x": 0.68,
+              "y": 0.5,
+              "w": 0.2,
+              "h": 0.22,
+              "at": 3.4,
+              "in_dur": 0.6
+            },
+            {
+              "type": "headline",
+              "text": "ما خطرت على بال إنسان",
+              "bar": "white",
+              "size": 0.05,
+              "x": 0.68,
+              "y": 0.7,
+              "rot": -2,
+              "at": 4.0,
+              "max_w": 0.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "feel": "revealing the secret ingredient",
+      "narration": "وسنة 2017 نشر فريق من غوغل ورقة بعنوان غريب: الانتباه هو كل اللي بتحتاجه. اسمها ترانسفورمر. هي الوصفة اللي كل الشات بوتات اليوم مبنية عليها.",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 5.65,
+          "camera": "push_in",
+          "plate": "a cut-out research paper with a diagram of stacked boxes and arrows, a red paper seal, torn edges, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "scientific paper with a diagram of stacked blocks connected by arrows, front view",
+              "effects": [
+                "old"
+              ],
+              "x": 0.34,
+              "y": 0.5,
+              "w": 0.26,
+              "rot": -3,
+              "at": 0.1
+            },
+            {
+              "type": "stamp",
+              "text": "2017",
+              "x": 0.44,
+              "y": 0.22,
+              "size": 0.06,
+              "rot": 12,
+              "at": 0.5
+            },
+            {
+              "type": "headline",
+              "text": "«الانتباه هو كل اللي بتحتاجه»",
+              "bar": "yellow",
+              "size": 0.055,
+              "x": 0.7,
+              "y": 0.35,
+              "rot": -2,
+              "at": 1.0,
+              "max_w": 0.42
+            },
+            {
+              "type": "headline",
+              "text": "ترانسفورمر",
+              "bar": "red",
+              "size": 0.08,
+              "x": 0.7,
+              "y": 0.6,
+              "rot": -2,
+              "at": 2.8,
+              "max_w": 0.5,
+              "fill": "white"
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "dur": 5.08,
+          "camera": "static",
+          "plate": "a paper recipe card cut-out, small paper icons of chat bubbles pinned around it with red strings, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "vintage handwritten recipe card, front view",
+              "effects": [
+                "old"
+              ],
+              "x": 0.34,
+              "y": 0.5,
+              "w": 0.24,
+              "rot": -3,
+              "at": 0.1
+            },
+            {
+              "type": "pin",
+              "x": 0.34,
+              "y": 0.24,
+              "at": 0.4
+            },
+            {
+              "type": "headline",
+              "text": "الوصفة السرية",
+              "bar": "yellow",
+              "size": 0.075,
+              "x": 0.7,
+              "y": 0.35,
+              "rot": -2,
+              "at": 0.8,
+              "max_w": 0.5
+            },
+            {
+              "type": "headline",
+              "text": "كل الشات بوتات مبنية عليها",
+              "bar": "white",
+              "size": 0.05,
+              "x": 0.7,
+              "y": 0.58,
+              "rot": -2,
+              "at": 2.2,
+              "max_w": 0.4
+            },
+            {
+              "type": "arrow",
+              "x0": 0.55,
+              "y0": 0.5,
+              "x1": 0.44,
+              "y1": 0.5,
+              "at": 3.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "feel": "explosive, breaking-news",
+      "narration": "ثلاثين نوفمبر 2022. شركة صغيرة اسمها أوبن إيه آي نزّلت موقع بسيط: شات جي بي تي. بخمسة أيام مليون مستخدم. بشهرين، مئة مليون. أسرع تطبيق بتاريخ البشرية.",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 5.65,
+          "camera": "push_in",
+          "plate": "a cut-out laptop screen showing a plain chat window, exploding paper confetti and torn newspaper headline strips, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "open laptop with a plain white chat interface on screen, front view",
+              "effects": [],
+              "x": 0.6,
+              "y": 0.52,
+              "w": 0.4,
+              "rot": -3,
+              "at": 0.1
+            },
+            {
+              "type": "headline",
+              "text": "خبر عاجل",
+              "bar": "red",
+              "size": 0.09,
+              "x": 0.2,
+              "y": 0.16,
+              "rot": -2,
+              "at": 0.4,
+              "max_w": 0.5,
+              "fill": "white"
+            },
+            {
+              "type": "headline",
+              "text": "30 نوفمبر 2022",
+              "bar": "yellow",
+              "size": 0.065,
+              "x": 0.2,
+              "y": 0.42,
+              "rot": -2,
+              "at": 1.2,
+              "max_w": 0.32
+            },
+            {
+              "type": "headline",
+              "text": "شات جي بي تي",
+              "bar": "black",
+              "size": 0.07,
+              "x": 0.2,
+              "y": 0.62,
+              "rot": -2,
+              "at": 2.4,
+              "max_w": 0.5,
+              "fill": "white"
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "dur": 6.21,
+          "camera": "pull_out",
+          "plate": "a huge paper counter made of torn number cards, a crowd photo cut-out of many people holding phones, a red rocket doodle, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "large crowd of people all looking at their phones, wide shot",
+              "effects": [
+                "bw"
+              ],
+              "x": 0.6,
+              "y": 0.55,
+              "w": 0.44,
+              "rot": 0,
+              "at": 0.1
+            },
+            {
+              "type": "headline",
+              "text": "5 أيام = مليون",
+              "bar": "yellow",
+              "size": 0.065,
+              "x": 0.22,
+              "y": 0.22,
+              "rot": -2,
+              "at": 0.5,
+              "max_w": 0.34
+            },
+            {
+              "type": "headline",
+              "text": "شهرين = 100 مليون",
+              "bar": "red",
+              "size": 0.065,
+              "x": 0.22,
+              "y": 0.45,
+              "rot": -2,
+              "at": 1.8,
+              "max_w": 0.34,
+              "fill": "white"
+            },
+            {
+              "type": "stamp",
+              "text": "رقم قياسي",
+              "x": 0.75,
+              "y": 0.24,
+              "size": 0.065,
+              "rot": -10,
+              "at": 3.2
+            },
+            {
+              "type": "underline",
+              "x": 0.22,
+              "y": 0.52,
+              "w": 0.22,
+              "at": 3.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "feel": "colorful, creative, surprising",
+      "narration": "وبنفس السنة الآلة صارت ترسم. بتكتب جملة، بتطلعلك لوحة. فنانين خافوا، ومصورين احتجّوا، ومسابقة فنية بولاية كولورادو فازت فيها صورة مرسومة بالذكاء الاصطناعي. والناس ما عرفت غير بعدين.",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 6.21,
+          "camera": "push_in",
+          "plate": "a cut-out ornate gold picture frame containing an abstract painting, paper paint splashes in bold colors, a cut-out typewriter, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "ornate golden picture frame with an abstract painting inside, front view",
+              "effects": [],
+              "x": 0.6,
+              "y": 0.5,
+              "w": 0.34,
+              "rot": -2,
+              "at": 0.1
+            },
+            {
+              "type": "headline",
+              "text": "الآلة صارت ترسم",
+              "bar": "yellow",
+              "size": 0.07,
+              "x": 0.22,
+              "y": 0.22,
+              "rot": -2,
+              "at": 0.6,
+              "max_w": 0.34
+            },
+            {
+              "type": "headline",
+              "text": "جملة → لوحة",
+              "bar": "white",
+              "size": 0.06,
+              "x": 0.22,
+              "y": 0.5,
+              "rot": -2,
+              "at": 2.0,
+              "max_w": 0.5
+            },
+            {
+              "type": "stamp",
+              "text": "2022",
+              "x": 0.74,
+              "y": 0.22,
+              "size": 0.06,
+              "rot": 10,
+              "at": 3.2
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "dur": 6.21,
+          "camera": "pan_l",
+          "plate": "a black-and-white photo cut-out of an art-fair ribbon and a trophy, a crowd of protesters with paper signs cut out, a red rosette, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "first-place blue ribbon rosette award, front view",
+              "effects": [],
+              "x": 0.3,
+              "y": 0.5,
+              "w": 0.16,
+              "rot": -5,
+              "at": 0.1
+            },
+            {
+              "type": "headline",
+              "text": "فازت بمسابقة فنية",
+              "bar": "red",
+              "size": 0.07,
+              "x": 0.68,
+              "y": 0.32,
+              "rot": -2,
+              "at": 0.8,
+              "max_w": 0.4,
+              "fill": "white"
+            },
+            {
+              "type": "headline",
+              "text": "والناس ما عرفت غير بعدين",
+              "bar": "white",
+              "size": 0.05,
+              "x": 0.68,
+              "y": 0.56,
+              "rot": -2,
+              "at": 2.6,
+              "max_w": 0.4
+            },
+            {
+              "type": "stamp",
+              "text": "احتجاج",
+              "x": 0.3,
+              "y": 0.24,
+              "size": 0.06,
+              "rot": -12,
+              "at": 3.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "feel": "calm explainer, honest",
+      "narration": "بس خلينا نكون صريحين: الآلة ما بتفهم زيّنا. هي بتتوقع الكلمة الجاية بناءً على تريليونات الكلمات اللي قرأتها. وأحياناً بتتوقع غلط بثقة كاملة. سمّوها: هلوسة.",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 6.21,
+          "camera": "push_in",
+          "plate": "a paper collage of a torn dictionary page, cut-out word cards lined up with one blank card at the end and a red question mark, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "row of paper word cards with one blank card at the end, front view",
+              "effects": [
+                "old"
+              ],
+              "x": 0.6,
+              "y": 0.5,
+              "w": 0.44,
+              "rot": 0,
+              "at": 0.1
+            },
+            {
+              "type": "headline",
+              "text": "كيف بتشتغل فعلاً؟",
+              "bar": "yellow",
+              "size": 0.07,
+              "x": 0.22,
+              "y": 0.2,
+              "rot": -2,
+              "at": 0.5,
+              "max_w": 0.34
+            },
+            {
+              "type": "headline",
+              "text": "بتتوقع الكلمة الجاية",
+              "bar": "white",
+              "size": 0.055,
+              "x": 0.22,
+              "y": 0.5,
+              "rot": -2,
+              "at": 2.0,
+              "max_w": 0.32
+            },
+            {
+              "type": "circle",
+              "x": 0.78,
+              "y": 0.5,
+              "w": 0.1,
+              "h": 0.24,
+              "at": 3.4,
+              "in_dur": 0.6
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "dur": 5.65,
+          "camera": "static",
+          "plate": "a black-and-white photo cut-out of a confident man in a suit pointing, a torn paper sign, a red warning stamp, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "confident man in a suit pointing at the camera, chest up",
+              "effects": [
+                "bw",
+                "censor_eyes"
+              ],
+              "x": 0.3,
+              "y": 0.52,
+              "w": 0.22,
+              "rot": -3,
+              "at": 0.1
+            },
+            {
+              "type": "headline",
+              "text": "غلط… بثقة كاملة",
+              "bar": "red",
+              "size": 0.075,
+              "x": 0.68,
+              "y": 0.35,
+              "rot": -2,
+              "at": 0.8,
+              "max_w": 0.42,
+              "fill": "white"
+            },
+            {
+              "type": "stamp",
+              "text": "هلوسة",
+              "x": 0.7,
+              "y": 0.6,
+              "size": 0.08,
+              "rot": -12,
+              "at": 2.6
+            },
+            {
+              "type": "arrow",
+              "x0": 0.55,
+              "y0": 0.62,
+              "x1": 0.42,
+              "y1": 0.5,
+              "at": 3.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "feel": "present-day, fast montage",
+      "narration": "واليوم؟ الذكاء الاصطناعي بيكتب، بيرسم، بيشخّص أمراض، بيقود سيارات، وبيتعلّم يشتغل لحاله كوكيل. ومع كل هاد، الأسئلة الكبيرة رجعت: مين بيتحكّم فيه؟ وشو بيصير بالشغل؟",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 6.21,
+          "camera": "push_in",
+          "plate": "a busy collage of cut-out photos: a robot arm, a stethoscope, a paintbrush, a car, a pen, arranged around a central paper brain cut-out, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "paper cut-out illustration of a human brain with circuit lines",
+              "effects": [],
+              "x": 0.5,
+              "y": 0.5,
+              "w": 0.22,
+              "rot": 0,
+              "at": 0.1
+            },
+            {
+              "type": "headline",
+              "text": "بيكتب",
+              "bar": "yellow",
+              "size": 0.06,
+              "x": 0.22,
+              "y": 0.25,
+              "rot": -2,
+              "at": 0.6,
+              "max_w": 0.5
+            },
+            {
+              "type": "headline",
+              "text": "بيرسم",
+              "bar": "yellow",
+              "size": 0.06,
+              "x": 0.78,
+              "y": 0.25,
+              "rot": 3,
+              "at": 1.1,
+              "max_w": 0.5
+            },
+            {
+              "type": "headline",
+              "text": "بيشخّص",
+              "bar": "white",
+              "size": 0.06,
+              "x": 0.2,
+              "y": 0.62,
+              "rot": -2,
+              "at": 1.6,
+              "max_w": 0.5
+            },
+            {
+              "type": "headline",
+              "text": "بيقود",
+              "bar": "white",
+              "size": 0.06,
+              "x": 0.8,
+              "y": 0.62,
+              "rot": -3,
+              "at": 2.1,
+              "max_w": 0.5
+            },
+            {
+              "type": "stamp",
+              "text": "وكيل",
+              "x": 0.5,
+              "y": 0.78,
+              "size": 0.06,
+              "rot": 8,
+              "at": 3.0
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "dur": 6.21,
+          "camera": "pan_r",
+          "plate": "a black-and-white photo cut-out of a boardroom of men in suits seen from behind, a red string web connecting paper cards, a big red question mark, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "boardroom of executives seen from behind facing a large window, wide shot",
+              "effects": [
+                "bw"
+              ],
+              "x": 0.6,
+              "y": 0.52,
+              "w": 0.42,
+              "rot": 0,
+              "at": 0.1
+            },
+            {
+              "type": "headline",
+              "text": "مين بيتحكّم فيه؟",
+              "bar": "red",
+              "size": 0.07,
+              "x": 0.22,
+              "y": 0.28,
+              "rot": -2,
+              "at": 0.6,
+              "max_w": 0.34,
+              "fill": "white"
+            },
+            {
+              "type": "headline",
+              "text": "وشو بيصير بالشغل؟",
+              "bar": "yellow",
+              "size": 0.06,
+              "x": 0.22,
+              "y": 0.55,
+              "rot": -2,
+              "at": 2.4,
+              "max_w": 0.34
+            },
+            {
+              "type": "stamp",
+              "text": "سري للغاية",
+              "x": 0.76,
+              "y": 0.24,
+              "size": 0.06,
+              "rot": -12,
+              "at": 3.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "feel": "reflective, then call to action",
+      "narration": "من سؤال تورينغ سنة 1950 لتطبيق بجيبة كل واحد فينا: 75 سنة من الأحلام والشتاء والانفجار. والقصة لسا ما خلصت. لو حابب تعرف كيف بتأثر هالأدوات على أطفالنا، تابع القناة.",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 6.78,
+          "camera": "pan_r",
+          "plate": "a long paper timeline strip with pinned small black-and-white photos and paper flags along a red string, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "cutout",
+              "subject": "horizontal paper timeline with small pinned photographs and paper flags on a red string",
+              "effects": [
+                "old"
+              ],
+              "x": 0.5,
+              "y": 0.5,
+              "w": 0.8,
+              "rot": 0,
+              "at": 0.1
+            },
+            {
+              "type": "headline",
+              "text": "1950",
+              "bar": "white",
+              "size": 0.06,
+              "x": 0.15,
+              "y": 0.22,
+              "rot": -2,
+              "at": 0.5,
+              "max_w": 0.5
+            },
+            {
+              "type": "headline",
+              "text": "1997",
+              "bar": "white",
+              "size": 0.06,
+              "x": 0.4,
+              "y": 0.22,
+              "rot": -2,
+              "at": 1.3,
+              "max_w": 0.5
+            },
+            {
+              "type": "headline",
+              "text": "2016",
+              "bar": "white",
+              "size": 0.06,
+              "x": 0.62,
+              "y": 0.22,
+              "rot": -2,
+              "at": 2.0,
+              "max_w": 0.5
+            },
+            {
+              "type": "headline",
+              "text": "2022",
+              "bar": "red",
+              "size": 0.06,
+              "x": 0.85,
+              "y": 0.22,
+              "rot": -2,
+              "at": 2.7,
+              "max_w": 0.5,
+              "fill": "white"
+            },
+            {
+              "type": "headline",
+              "text": "75 سنة",
+              "bar": "yellow",
+              "size": 0.08,
+              "x": 0.5,
+              "y": 0.75,
+              "rot": -2,
+              "at": 3.6,
+              "max_w": 0.5
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "dur": 6.21,
+          "camera": "static",
+          "plate": "a clean aged newsprint page with a wide torn red paper strip across the middle, a pinned blank note, a paper airplane doodle, on aged cream newsprint with dense illegible Arabic newspaper columns, halftone dots, tape corners, red push pins",
+          "layers": [
+            {
+              "type": "headline",
+              "text": "القصة لسا ما خلصت",
+              "bar": "black",
+              "size": 0.08,
+              "x": 0.5,
+              "y": 0.3,
+              "rot": -2,
+              "at": 0.3,
+              "max_w": 0.5,
+              "fill": "white"
+            },
+            {
+              "type": "headline",
+              "text": "تابع القناة",
+              "bar": "red",
+              "size": 0.1,
+              "x": 0.5,
+              "y": 0.55,
+              "rot": -2,
+              "at": 1.6,
+              "max_w": 0.5,
+              "fill": "white"
+            },
+            {
+              "type": "circle",
+              "x": 0.5,
+              "y": 0.55,
+              "w": 0.3,
+              "h": 0.3,
+              "at": 2.6,
+              "in_dur": 0.6
+            },
+            {
+              "type": "pin",
+              "x": 0.28,
+              "y": 0.4,
+              "at": 3.2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

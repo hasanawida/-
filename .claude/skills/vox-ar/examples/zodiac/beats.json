@@ -1,0 +1,207 @@
+{
+  "project": "zodiac",
+  "topic": "zodiac",
+  "language": "ar",
+  "aspect": "16:9",
+  "fps": 30,
+  "theme": "dark-investigative",
+  "provider": "gemini",
+  "plates": "procedural",
+  "parallax": 1.0,
+  "fx": [
+    "dust",
+    "sweep"
+  ],
+  "transitions": {
+    "default": "tear",
+    "dur": 0.5
+  },
+  "tts": {
+    "engine": "edge",
+    "persona": "documentary_male"
+  },
+  "music": {
+    "path": "auto",
+    "mood": "tense",
+    "gain_db": -18
+  },
+  "captions": {
+    "enabled": true,
+    "style": "highlight",
+    "bar": "white",
+    "fill": "black",
+    "size": 0.05,
+    "position": 0.86,
+    "max_words": 5
+  },
+  "beats": [
+    {
+      "id": 1,
+      "narration": "الرابع من ديسمبر 1966. مدينة فاليخو، كاليفورنيا. شرطي دورية يمر بجانب سيارة متوقفة قرب مدرسة مغلقة.",
+      "shots": [
+        {
+          "preset": "hero_right",
+          "bg": "black",
+          "cutout": "1960s police patrol car at night, side view",
+          "effects": [
+            "bw",
+            "old"
+          ],
+          "headline": "4 ديسمبر 1966",
+          "headline_bar": "red",
+          "sub": "فاليخو، كاليفورنيا",
+          "stamp": "ملف سري",
+          "mark": "circle",
+          "sfx_hint": "police siren",
+          "id": "a",
+          "dur": 6.666666666666667,
+          "camera": "pan_r"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "narration": "بداخلها فتاة وشاب قُتلا بالرصاص دون سبب واضح.",
+      "shots": [
+        {
+          "preset": "hero_left",
+          "bg": "black",
+          "cutout": "1960s abandoned car near a school at night",
+          "effects": [
+            "bw"
+          ],
+          "headline": "قتل بلا سبب واضح",
+          "sub": "فتاة وشاب بالرصاص",
+          "mark": "arrow",
+          "transition": "slide",
+          "id": "a",
+          "dur": 3.5,
+          "camera": "pull_out"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "narration": "بعد سبعة أشهر، جريمة مشابهة تتكرر عند بحيرة هيرمان. هذه المرة تنجو الفتاة، وتصف رجلاً يرتدي قناعاً أسود.",
+      "shots": [
+        {
+          "preset": "timeline",
+          "bg": "cream",
+          "headline": "الجريمة تتكرر",
+          "items": [
+            "ديسمبر 1966",
+            "يوليو 1967",
+            "سبتمبر 1969"
+          ],
+          "stamp": "نمط",
+          "id": "a",
+          "dur": 7.0,
+          "camera": "pan_l"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "narration": "ثم يبدأ القاتل بكتابة رسائل مشفّرة يرسلها إلى الصحف المحلية، موقّعة برمز دائرة وصليب، ويهدد بمزيد من القتل إن لم تُنشر.",
+      "shots": [
+        {
+          "preset": "callouts",
+          "bg": "cream",
+          "cutout": "handwritten cipher letter with a circle-and-cross symbol",
+          "effects": [
+            "old"
+          ],
+          "headline": "رسائل مشفّرة",
+          "callouts": [
+            {
+              "text": "رمز الدائرة والصليب",
+              "x": 0.2,
+              "y": 0.3,
+              "tx": 0.62,
+              "ty": 0.4
+            },
+            {
+              "text": "تهديد بالقتل",
+              "x": 0.2,
+              "y": 0.5,
+              "tx": 0.6,
+              "ty": 0.62
+            }
+          ],
+          "sfx_hint": "typewriter",
+          "id": "a",
+          "dur": 7.0,
+          "camera": "static"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "narration": "الصحف تنشر ثلاثاً من أصل أربع شفرات. تُحلّ لاحقاً، لكن الرابعة تظل لغزاً لعقود.",
+      "shots": [
+        {
+          "preset": "stats",
+          "bg": "cream",
+          "headline": "الشفرات الأربع",
+          "items": [
+            [
+              "الأولى",
+              1
+            ],
+            [
+              "الثانية",
+              1
+            ],
+            [
+              "الثالثة",
+              1
+            ],
+            [
+              "الرابعة",
+              0
+            ]
+          ],
+          "stamp": "لغز",
+          "id": "a",
+          "dur": 5.833333333333334,
+          "camera": "drift"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "narration": "يوقّع رسائله باسم واحد: زودياك. تحقيقات مكتب التحقيقات الفيدرالي تمتد لأكثر من 50 عاماً، ومشتبه به رئيسي يموت دون اعتراف.",
+      "shots": [
+        {
+          "preset": "number",
+          "bg": "red",
+          "value": 50,
+          "suffix": "سنة",
+          "headline_bar": "white",
+          "sub": "تحقيقات FBI بلا اعتراف",
+          "badge": "؟",
+          "id": "a",
+          "dur": 7.0,
+          "camera": "push_in"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "narration": "حتى اليوم، يحمل الملف الرسمي توقيعاً واحداً: رمز الدائرة والصليب، الذي لم يُفسَّر بعد.",
+      "shots": [
+        {
+          "preset": "quote",
+          "bg": "black",
+          "headline": "«رمز الدائرة والصليب لم يُفسَّر بعد»",
+          "headline_bar": "white",
+          "stamp": "حتى اليوم",
+          "transition": "flip",
+          "id": "a",
+          "dur": 5.833333333333334,
+          "camera": "pan_r"
+        }
+      ]
+    }
+  ]
+}

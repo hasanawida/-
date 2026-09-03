@@ -5,14 +5,15 @@
     python3 scripts/engine.py out/<project> --images procedural --tts edge
 
 --images  procedural (مجاني، بلا API) | gemini (لوحات ذكية) | pollinations | placeholder
---tts     edge | gemini | eleven | piper (صوت محلي جاهز، لا يُعاد توليده)
+--tts     edge | gemini | eleven | piper (محلي، بلا مفتاح ولا إنترنت)
 --voice   voice id لـ ElevenLabs، أو اسم صوت edge/gemini
 
 عند تغيير الـ TTS يُمسح كاش الصوت (narration_cached) كي يُعاد التوليد بالمحرك الجديد.
 """
 import argparse, json, os, sys
 
-PERSONA = {"edge": "documentary_male", "gemini": "gemini_narrator", "eleven": "eleven"}
+PERSONA = {"edge": "documentary_male", "gemini": "gemini_narrator",
+           "eleven": "eleven", "piper": "piper_ar"}
 
 ap = argparse.ArgumentParser()
 ap.add_argument("project")
@@ -40,23 +41,23 @@ if a.images:
     print(f"الصور → {a.images} (plates={doc['plates']}, provider={doc['provider']})")
 
 if a.tts:
-    if a.tts == "piper":
-        print("الصوت → piper المحلي (الملفات الحالية تُستخدم كما هي)")
-    else:
-        tts = {"persona": PERSONA[a.tts]}
-        if a.voice:
-            tts["voice"] = a.voice
-        doc["tts"] = tts
-        cleared = 0
-        for b in doc["beats"]:
-            if b.pop("narration_cached", None) is not None:
-                b.pop("word_timings", None); b.pop("audio_duration", None); b.pop("audio_path", None)
-                cleared += 1
-        print(f"الصوت → {a.tts} (persona={tts['persona']}) — مُسح كاش {cleared} تعليق")
-        if a.tts == "eleven" and not os.environ.get("ELEVENLABS_API_KEY"):
+    tts = {"persona": PERSONA[a.tts]}
+    if a.voice:
+        tts["voice"] = a.voice
+    doc["tts"] = tts
+    cleared = 0
+    for b in doc["beats"]:
+        if b.pop("narration_cached", None) is not None:
+            b.pop("word_timings", None); b.pop("audio_duration", None); b.pop("audio_path", None)
+            cleared += 1
+    print(f"الصوت → {a.tts} (persona={tts['persona']}) — مُسح كاش {cleared} تعليق")
+    if a.tts == "eleven":
+        if not os.environ.get("ELEVENLABS_API_KEY"):
             print("تنبيه: ELEVENLABS_API_KEY غير مضبوط.", file=sys.stderr)
-        if a.tts == "eleven" and not (a.voice or os.environ.get("ELEVEN_VOICE_ID")):
-            print("تنبيه: لم يُحدَّد voice id لـ ElevenLabs (--voice أو ELEVEN_VOICE_ID).", file=sys.stderr)
+        if not (a.voice or os.environ.get("ELEVEN_VOICE_ID")):
+            print("تنبيه: لم يُحدَّد voice id (--voice أو ELEVEN_VOICE_ID).", file=sys.stderr)
+    if a.tts == "gemini":
+        print("تنبيه: Gemini TTS لا يعطي توقيت كلمات — الكابشن سيوزَّع بالتساوي.", file=sys.stderr)
 
 json.dump(doc, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 print("تم →", path)

@@ -1,0 +1,65 @@
+{
+  "project": "screen-time",
+  "topic": "ليش الشاشة بتأخّر كلام طفلك؟ (ريل 40 ثانية)",
+  "language": "ar",
+  "aspect": "9:16",
+  "fps": 30,
+  "theme": "arabic-newsprint",
+  "provider": "placeholder",
+  "plates": "procedural",
+  "parallax": 1.0,
+  "tts": { "engine": "placeholder", "persona": "levant_male" },
+  "music": { "path": "auto", "mood": "kids", "gain_db": -18 },
+  "captions": { "enabled": true, "style": "highlight", "bar": "white", "fill": "black", "size": 0.034, "position": 0.82, "max_words": 4 },
+  "beats": [
+    {
+      "id": 1,
+      "feel": "urgent, investigative",
+      "narration": "طفلك عمره سنتين وبعده ما بيحكي؟ في سبب واحد ما حدا بيحكيلك عنه.",
+      "shots": [
+        { "id": "a", "dur": 4.5, "preset": "hero_center", "bg": "cream", "camera": "push_in",
+          "cutout": "toddler sitting on the floor holding a tablet, seen from the side", "effects": ["bw", "torn"],
+          "headline": "خبر عاجل", "headline_bar": "red", "sub": "سنتين وبعده ما بيحكي؟", "mark": "circle", "tape": true }
+      ]
+    },
+    {
+      "id": 2,
+      "feel": "revealing a hidden fact",
+      "narration": "الدراسات بتقول: كل ساعة شاشة إضافية قبل عمر السنتين بتقلّل الكلمات اللي بيسمعها الطفل من أهله بمئات الكلمات يومياً.",
+      "shots": [
+        { "id": "a", "dur": 4.5, "preset": "stats", "bg": "cream", "camera": "static",
+          "headline": "كلمات بيسمعها الطفل بالساعة", "items": [["بدون شاشة", 940], ["ساعة شاشة", 770], ["3 ساعات", 430]], "stamp": "دراسة" },
+        { "id": "b", "dur": 4.0, "preset": "number", "bg": "red", "camera": "push_in",
+          "value": 500, "prefix": "-", "suffix": " كلمة", "headline_bar": "white", "sub": "يومياً… من أهله", "badge": "!" }
+      ]
+    },
+    {
+      "id": 3,
+      "feel": "practical checklist",
+      "narration": "طيب كيف بتعرف إنه متأخر؟ بيشاور بإصبعه؟ بيرد على اسمه؟ بيقلّد الأصوات؟ لو الجواب لا على اثنتين، لازم تقييم.",
+      "shots": [
+        { "id": "a", "dur": 6.0, "preset": "checklist", "bg": "cream", "camera": "pan_up",
+          "headline": "علامات لازم تنتبه لها", "items": [["بيشاور بإصبعه", true], ["بيرد على اسمه", true], ["بيقلّد الأصوات", false]], "stamp": "تقييم" }
+      ]
+    },
+    {
+      "id": 4,
+      "feel": "hopeful, practical",
+      "narration": "الحل مش إنك تمنع الشاشة كلياً. الحل إنك تشاركه: احكي عن اللي بيشوفه، واسأله، وعلّق.",
+      "shots": [
+        { "id": "a", "dur": 5.0, "preset": "note", "bg": "yellow", "camera": "pull_out",
+          "cutout": "parent and toddler sitting together pointing at a picture book", "effects": ["bw"],
+          "headline": "الحل: شاركه", "note": "احكي، اسأل، علّق", "bubble": "شو هاد؟ قطة!" }
+      ]
+    },
+    {
+      "id": 5,
+      "feel": "call to action",
+      "narration": "أنا معالج وظيفي، وبنزّل كل أسبوع خطوة عملية لتطوّر طفلك. تابعني.",
+      "shots": [
+        { "id": "a", "dur": 4.0, "preset": "title", "bg": "cream", "camera": "static",
+          "headline": "تابعني", "headline_bar": "red", "sub": "خطوة عملية كل أسبوع", "mark": "circle", "badge": "جديد" }
+      ]
+    }
+  ]
+}
