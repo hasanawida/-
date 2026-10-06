@@ -1,7 +1,7 @@
 // Al-Bayan service worker: cache static assets for fast/offline shell loading.
 // API calls and pages are always network — transcription requires connectivity;
 // the win here is instant startup and surviving flaky mobile connections.
-const CACHE = "albayan-static-v3";
+const CACHE = "albayan-static-v4";
 const PRECACHE = [
   "/static/style.css",
   "/static/app.js",

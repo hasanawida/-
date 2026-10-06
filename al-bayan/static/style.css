@@ -3325,3 +3325,51 @@ body[data-page="files"] .file-select { display: inline-block; }
   0%, 100% { background: var(--accent-warm-soft); }
   50% { background: rgba(180, 83, 9, 0.28); }
 }
+
+/* ========== MOBILE FIXES ========== */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { overflow-wrap: break-word; }
+
+/* The landing <body> also carries .auth-body, whose flex row (meant to centre the
+   login card) laid header, main and footer side by side — on phones the nav was
+   pushed off-screen and the page scrolled sideways. Stack them instead. */
+body.landing-body { display: block; }
+.landing-nav { gap: 12px; }
+.landing-features { grid-template-columns: repeat(auto-fit, minmax(min(270px, 100%), 1fr)); }
+.landing-plan { width: min(280px, 100%); }
+
+@media (max-width: 520px) {
+  .landing-nav { padding: 14px 16px; }
+  .landing-brand { gap: 8px; font-size: 1.05em; }
+  .landing-brand .brand-en { display: none; }
+  .landing-cta-sm { padding: 9px 14px; }
+  .landing-main { padding: 0 16px 32px; }
+  .landing-hero { padding: 28px 0 24px; }
+  .landing-sub { font-size: 1.02em; }
+  .landing-cta { display: block; padding: 15px 20px; }
+  .landing-plans .landing-plan { width: 100%; }
+  .landing-verse { font-size: 1.2em; }
+  .landing-footer { padding: 20px 16px calc(20px + env(safe-area-inset-bottom)); }
+  .auth-wrap { padding: 14px; }
+  .auth-card { padding: 26px 20px 22px; }
+  .legal-card { padding: 26px 20px; }
+  .legal-card h1 { font-size: 25px; }
+}
+
+/* iOS Safari zooms into any focused field under 16px and never zooms back out. */
+@media (max-width: 900px) {
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]),
+  select, textarea { font-size: 16px; }
+}
+
+/* Comfortable tap targets for the small text links on auth/legal pages. */
+.auth-links a, .auth-terms a, .legal-back, .landing-footer a { display: inline-block; padding: 6px 2px; }
+.auth-terms input { width: 20px; height: 20px; flex: none; }
+
+/* 100vh on mobile includes the area under the browser toolbars, so full-height
+   panels got their bottom cut off. dvh tracks the visible viewport. */
+@supports (height: 100dvh) {
+  body, .auth-body, .app-shell { min-height: 100dvh; }
+  .sidebar { height: 100dvh; }
+  .ask-chat { height: calc(100dvh - 210px); }
+}
