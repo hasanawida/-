@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a73e8"/>
+      <stop offset="50%" stop-color="#5856d6"/>
+      <stop offset="100%" stop-color="#c8a04d"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.3)"/>
+      <stop offset="50%" stop-color="rgba(255,255,255,0.05)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="120" height="120" rx="28" ry="28" fill="url(#bg)"/>
+  <rect x="4" y="4" width="120" height="60" rx="28" ry="28" fill="url(#shine)"/>
+  <!-- Stylized ب (ba) with dot below: wide bowl + single dot -->
+  <path d="M 30 56
+           Q 30 78, 50 80
+           L 78 80
+           Q 98 78, 98 56"
+        stroke="white" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <circle cx="64" cy="100" r="5.5" fill="white"/>
+  <!-- Small sound/speech accent lines -->
+  <g stroke="rgba(255,255,255,0.55)" stroke-width="3" stroke-linecap="round" fill="none">
+    <line x1="42" y1="36" x2="42" y2="30"/>
+    <line x1="64" y1="34" x2="64" y2="26"/>
+    <line x1="86" y1="36" x2="86" y2="30"/>
+  </g>
+</svg>
